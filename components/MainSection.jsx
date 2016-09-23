@@ -1,30 +1,41 @@
 import React from 'react';
-import mui, {
-  CircularProgress,
-  Tabs,
-  Tab,
-  DatePicker,
-  AppBar,
-} from 'material-ui';
+// import {
+//   CircularProgress,
+// } from 'material-ui';
+
+function rtmpSrc() {
+  return 'rtmp://miyahira.me/jey3/kido';
+}
+
+function m3u8Src() {
+  return 'rtmp://miyahira.me:8081/jey3hls/kido.m3u8';
+}
+
+function poster() {
+  return '//i.imgur.com/2Rq14GG.jpg';
+}
 
 const MainSection = () => (
-  <div>
-    <h1>Progress Component</h1>
-    <CircularProgress mode="indeterminate" size={1.5} />
-    <CircularProgress mode="indeterminate" color={"red"} size={2} />
-    <br />
-
-    <h1>Tab Component</h1>
-    <Tabs>
-      <Tab label="Tab One" value="0" />
-      <Tab label="Tab Two" value="1" />
-      <Tab label="Tab Three" value="2" />
-    </Tabs>
-    <br />
-
-    <h1>DatePicker Component</h1>
-    <DatePicker hintText="Portrait Dialog" />
-    <br />
+  <div
+    id="main-video"
+    className="video-js vjs-default-skin"
+    controls
+    poster={poster()}
+    data-setup='{
+      "controls": true,
+      "preload": "auto",
+      "autoplay": true,
+      "techOrder": ["flash", "html5", "other supported tech"],
+      "nativeControlsForTouch": true,
+      "controlBar": {
+        "muteToggle": true,
+        "timeDivider": false,
+        "durationDisplay": true,
+        "progressControl": true
+    }}'
+  >
+    <source src={rtmpSrc()} type="rtmp/mp4" />
+    <source src={m3u8Src()} type="application/x-mpegURL" />
   </div>
 );
 
