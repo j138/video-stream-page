@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, RaisedButton, Drawer, MenuItem } from 'material-ui';
 
-export default class header extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
