@@ -3,45 +3,72 @@ import React from 'react';
 //   CircularProgress,
 // } from 'material-ui';
 
-export default class MainSection extends React.Component {
-  static rtmpSrc() {
-    return 'rtmp://miyahira.me/jey3/kido';
+const request = require('superagent');
+
+class MainSection extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: [],
+      user: { name: '', image: '', stream_uri: '', hls_stream_uri: '' },
+    };
+
+    request.get(this.props.apiUrl)
+    .end((err, res) => {
+      if (err) {
+        throw err;
+      }
+      this.setState({ users: res.body });
+      this.pickUser();
+    });
   }
 
-  static m3u8Src() {
-    return 'rtmp://miyahira.me:8081/jey3hls/kido.m3u8';
-  }
-
-  static poster() {
-    return '//i.imgur.com/2Rq14GG.jpg';
+  pickUser() {
+    const { users } = this.state;
+    const user = users.jey;
+    this.setState({ user });
   }
 
   render() {
     return (
-      <div
-        id="main-video"
-        className="video-js vjs-default-skin"
-        controls
-        poster={this.poster}
-        data-setup='
-        {
-          "controls": true,
-          "preload": "auto",
-          "autoplay": true,
-          "techOrder": ["flash", "html5", "other supported tech"],
-          "nativeControlsForTouch": true,
-          "controlBar": {
-            "muteToggle": true,
-            "timeDivider": false,
-            "durationDisplay": true,
-            "progressControl": true
+      <div>
+        <p>{this.state.user.name}</p>
+        <div
+          id="main-video"
+          className="video-js vjs-default-skin"
+          poster={this.state.user.image}
+          controls
+          data-setup='
+          {
+            "controls": true,
+            "preload": "auto",
+            "autoplay": true,
+            "techOrder": ["flash", "html5", "other supported tech"],
+            "nativeControlsForTouch": true,
+            "controlBar": {
+              "muteToggle": true,
+              "timeDivider": false,
+              "durationDisplay": true,
+              "progressControl": true
+            }
           }
-        }
-        '
-      >
-        <source src={this.rtmpSrc} type="rtmp/mp4" />
-        <source src={this.m3u8Src} type="application/x-mpegURL" />
+          '
+        >
+          <source src={this.state.user.stream_uri} type="rtmp/mp4" />
+          <source src={this.state.user.hls_stream_uri} type="application/x-mpegURL" />
+        </div>
       </div>
     );
   }
 }
+
+MainSection.defaultProps = {
+  apiUrl: '/config.json',
+};
+
+MainSection.propTypes = {
+  apiUrl: React.PropTypes.string,
+};
+
+export default MainSection;

@@ -10,11 +10,15 @@ module.exports = {
     path: `${__dirname}/static`,
     filename: 'bundle.js',
   },
+  devServer: {
+    headers: { "Access-Control-Allow-Origin": "*" }
+  },
   module: {
     preLoaders: [
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'eslint-loader' },
     ],
     loaders: [
+      { test: /\.json$/, loader: 'file?name=[name].[ext]' },
       { test: /\.html$/, loader: 'file?name=[name].[ext]' },
       { test: /\.css$/, loader: 'file?name=[name].[ext]' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel-loader'] },
