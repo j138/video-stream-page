@@ -1,7 +1,7 @@
 import React from 'react';
 
 const VideoSection = props => (
-  <div
+  <video
     id="main-video"
     className="video-js vjs-default-skin"
     poster={props.user.image}
@@ -22,9 +22,9 @@ const VideoSection = props => (
     }
     '
   >
-    <source src={props.user.stream_uri} type="rtmp/mp4" />
-    <source src={props.user.hls_stream_uri} type="application/x-mpegURL" />
-  </div>
+    <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="application/mpeg" />
+    {props.user.source.map(v => <source key={v.src} src={v.src} type={v.type} />)}
+  </video>
 );
 
 VideoSection.propTypes = {

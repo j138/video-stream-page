@@ -1,8 +1,9 @@
 import * as Colors from 'material-ui/styles/colors';
 import * as ColorManipulator from 'material-ui/utils/colorManipulator';
 import Spacing from 'material-ui/styles/spacing';
+import darkTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 
-module.exports = {
+const customStyle = {
   spacing: Spacing,
   fontFamily: 'Roboto, sans-serif',
   appBar: {
@@ -22,3 +23,5 @@ module.exports = {
     disabledColor: ColorManipulator.fade(Colors.darkBlack, 0.3),
   },
 };
+
+module.exports = Object.assign(customStyle, darkTheme);

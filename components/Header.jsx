@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Drawer, MenuItem } from 'material-ui';
+import { AppBar, Drawer, MenuItem, Divider } from 'material-ui';
 
 class Header extends React.Component {
   constructor(props) {
@@ -7,24 +7,38 @@ class Header extends React.Component {
     this.state = { open: false };
   }
 
+  selectUser(v) {
+    this.props.selectUser(v);
+    this.state = { open: false };
+  }
+
   render() {
     return (
       <header>
         <AppBar
-          title={`Video Stream: ${this.props.user.name}`}
+          title={
+            <div>
+              miyahira-Stream: &nbsp;
+              {this.props.user.name}
+            </div>
+          }
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
+          iconClassNameRight="muidocs-icon-navigation-expand-more"
+        />
+
+        <Drawer
+          open={this.state.open}
+          docked={false}
+          onRequestChange={open => this.setState({ open })}
         >
-          <Drawer
-            open={this.state.open}
-            docked={false}
-            onRequestChange={open => this.setState({ open })}
-          >
-            {this.props.users.map(v =>
-              <MenuItem
-                onTouchTap={() => this.props.changeUser(v)} key={v} value={v} primaryText={v}
-              />)}
-          </Drawer>
-        </AppBar>
+          <MenuItem primaryText="Select Member" />
+          <Divider />
+
+          {this.props.users.map(v =>
+            <MenuItem
+              onTouchTap={() => this.selectUser(v)} key={v} value={v} primaryText={v}
+            />)}
+        </Drawer>
       </header>
     );
   }
@@ -33,7 +47,7 @@ class Header extends React.Component {
 Header.propTypes = {
   user: React.PropTypes.object,
   users: React.PropTypes.array,
-  changeUser: React.PropTypes.func,
+  selectUser: React.PropTypes.func,
 };
 
 export default Header;

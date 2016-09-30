@@ -1,7 +1,6 @@
 import React from 'react';
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
-// import MyRawTheme from '../components/materialUiRawThemeFile';
-import MyRawTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MyRawTheme from '../components/materialUiRawThemeFile';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 
@@ -13,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: { name: 'init', image: '', stream_uri: '', hls_stream_uri: '' },
+      user: { name: '', image: '', source: [{ src: '', type: '' }] },
       users: {},
     };
 
@@ -24,6 +23,9 @@ class App extends React.Component {
       }
 
       this.setState({ users: res.body });
+
+      const currentUser = Object.keys(this.state.users).shift();
+      this.setState({ user: this.state.users[currentUser] });
     });
   }
 
@@ -34,7 +36,7 @@ class App extends React.Component {
           <Header
             user={this.state.user}
             users={Object.keys(this.state.users)}
-            changeUser={v => this.setState({ user: this.state.users[v] })}
+            selectUser={v => this.setState({ user: this.state.users[v] })}
           />
           <VideoSection user={this.state.user} />
         </div>

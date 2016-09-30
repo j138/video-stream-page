@@ -69,7 +69,6 @@
     "react-router": "^2.8.1",
     "react-router-redux": "^4.0.6",
     "react-tap-event-plugin": "^1.0.0",
-    "react-videojs": "0.0.3",
     "redux": "^3.6.0",
     "superagent": "^2.3.0"
   }
