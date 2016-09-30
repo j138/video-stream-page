@@ -35,7 +35,7 @@ class App extends React.Component {
         <div>
           <Header
             user={this.state.user}
-            users={Object.keys(this.state.users)}
+            users={this.state.users}
             selectUser={v => this.setState({ user: this.state.users[v] })}
           />
           <VideoSection user={this.state.user} />
@@ -44,4 +44,5 @@ class App extends React.Component {
     );
   }
 }
+
 export default App;

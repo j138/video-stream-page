@@ -18,7 +18,7 @@ class Header extends React.Component {
         <AppBar
           title={
             <div>
-              miyahira-Stream: &nbsp;
+              miyahira Stream: &nbsp;
               {this.props.user.name}
             </div>
           }
@@ -34,9 +34,10 @@ class Header extends React.Component {
           <MenuItem primaryText="Select Member" />
           <Divider />
 
-          {this.props.users.map(v =>
+          {Object.keys(this.props.users).map(k =>
             <MenuItem
-              onTouchTap={() => this.selectUser(v)} key={v} value={v} primaryText={v}
+              onTouchTap={() => this.selectUser(k)} key={k} value={k}
+              primaryText={this.props.users[k].name}
             />)}
         </Drawer>
       </header>
@@ -46,7 +47,7 @@ class Header extends React.Component {
 
 Header.propTypes = {
   user: React.PropTypes.object,
-  users: React.PropTypes.array,
+  users: React.PropTypes.object,
   selectUser: React.PropTypes.func,
 };
 
