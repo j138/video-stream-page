@@ -7,6 +7,7 @@ const VideoSection = props => (
     poster={props.user.image}
     controls
     preload="auto"
+    src={props.user.source[0].src}
     data-setup='
     {
       "autoplay": true,
@@ -19,10 +20,9 @@ const VideoSection = props => (
         "progressControl": true
       }
     }'
-  >
-    {props.user.source.map((v, index) => <source key={`${props.user.name}-${index}`} {... v} />)}
-  </video>
+  />
 );
+  // {props.user.source.map((v, index) => <source key={`${props.user.name}-${index}`} {... v} />)}
 
 VideoSection.propTypes = {
   user: React.PropTypes.object,
