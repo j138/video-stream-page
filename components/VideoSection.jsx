@@ -1,18 +1,17 @@
 import React from 'react';
 
 const VideoSection = props => (
-  <div
+  <video
     id="main-video"
     className="video-js vjs-default-skin"
     poster={props.user.image}
     controls
+    preload="auto"
     data-setup='
     {
-      "controls": true,
-      "preload": "auto",
       "autoplay": true,
+      "nativeControlsForTouch": "true",
       "techOrder": ["flash", "html5", "other supported tech"],
-      "nativeControlsForTouch": true,
       "controlBar": {
         "muteToggle": true,
         "timeDivider": false,
@@ -23,7 +22,7 @@ const VideoSection = props => (
     '
   >
     {props.user.source.map(v => <source key={v.src} src={v.src} type={v.type} />)}
-  </div>
+  </video>
 );
 
 VideoSection.propTypes = {

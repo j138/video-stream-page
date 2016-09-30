@@ -18,7 +18,7 @@ class Header extends React.Component {
         <AppBar
           title={
             <div>
-              miyahira Stream: &nbsp;
+              Miyahira Stream: &nbsp;
               {this.props.user.name}
             </div>
           }
