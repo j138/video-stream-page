@@ -1,31 +1,39 @@
 import React from 'react';
-import { AppBar, RaisedButton, Drawer, MenuItem } from 'material-ui';
+import { AppBar, Drawer, MenuItem } from 'material-ui';
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
   }
 
-  handleToggle() {
-    console.log(this.state.open);
-    return this.setState({ open: !this.state.open });
-  }
-
   render() {
     return (
       <header>
-        <AppBar title="Video Stream">
-          <RaisedButton
-            label="Toggle"
-            onTouchTap={this.handleToggle}
-          />
-          <Drawer open={this.state.open}>
-            <MenuItem>Menu Item</MenuItem>
-            <MenuItem>Menu Item 2</MenuItem>
+        <AppBar
+          title={`Video Stream: ${this.props.user.name}`}
+          onLeftIconButtonTouchTap={() => this.setState({ open: true })}
+        >
+          <Drawer
+            open={this.state.open}
+            docked={false}
+            onRequestChange={open => this.setState({ open })}
+          >
+            {this.props.users.map(v =>
+              <MenuItem
+                onTouchTap={() => this.props.changeUser(v)} key={v} value={v} primaryText={v}
+              />)}
           </Drawer>
         </AppBar>
       </header>
     );
   }
 }
+
+Header.propTypes = {
+  user: React.PropTypes.object,
+  users: React.PropTypes.array,
+  changeUser: React.PropTypes.func,
+};
+
+export default Header;
