@@ -18,10 +18,9 @@ const VideoSection = props => (
         "durationDisplay": true,
         "progressControl": true
       }
-    }
-    '
+    }'
   >
-    {props.user.source.map(v => <source key={v.src} src={v.src} type={v.type} />)}
+    {props.user.source.map((v, index) => <source key={`${props.user.name}-${index}`} {... v} />)}
   </video>
 );
 
