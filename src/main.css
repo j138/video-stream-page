@@ -6,6 +6,7 @@ body {
   font-size: 13px;
   line-height: 20px;
   margin: 0;
+  background-color: #2B333F;
 }
 
 .video-js {
@@ -18,5 +19,6 @@ body {
   width: auto;
   height: auto;
   z-index: -100;
+  background-color: #2B333F;
   background-size: cover;
 }
