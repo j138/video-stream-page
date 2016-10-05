@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Drawer, MenuItem, Divider } from 'material-ui';
+import { Link } from 'react-router';
 
 class Header extends React.Component {
   constructor(props) {
@@ -35,10 +36,10 @@ class Header extends React.Component {
           <Divider />
 
           {Object.keys(this.props.users).map(k =>
-            <MenuItem
-              onTouchTap={() => this.selectUser(k)} key={k} value={k}
-              primaryText={this.props.users[k].name}
-            />)}
+            <Link key={k} to={k}>
+              <MenuItem primaryText={`${this.props.users[k].name}`} />
+            </Link>
+          )}
         </Drawer>
       </header>
     );

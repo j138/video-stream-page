@@ -1,4 +1,5 @@
 import React from 'react';
+import vjs from 'video.js/dist/video.min';
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
 import MyRawTheme from '../components/materialUiRawThemeFile';
 import Header from '../components/Header';
@@ -24,9 +25,36 @@ class App extends React.Component {
 
       this.setState({ users: res.body });
 
-      const currentUser = Object.keys(this.state.users).shift();
-      this.setState({ user: this.state.users[currentUser] });
+      const currentUserKey = (this.state.users[this.props.params.userName])
+      ? this.props.params.userName
+      : Object.keys(this.state.users).shift();
+
+      this.setState({ user: this.state.users[currentUserKey] });
     });
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.setState({ user: this.state.users[newProps.params.userName] });
+  }
+
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.params.userName !== this.state.user.name) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // componentWillUpdate() {
+  // }
+
+  componentDidUpdate() {
+    // window.console.log(this.videoSection.videoPlayer);
+    // vjs(this.videoSection.videoPlayer.id);
+    const v = vjs(this.videoSection.videoPlayer.id);
+    v.pause();
+    v.load();
+    v.play();
   }
 
   render() {
@@ -38,11 +66,18 @@ class App extends React.Component {
             users={this.state.users}
             selectUser={v => this.setState({ user: this.state.users[v] })}
           />
-          <VideoSection user={this.state.user} />
+          <VideoSection
+            ref={(c) => { this.videoSection = c; }}
+            user={this.state.user}
+          />
         </div>
       </MuiThemeProvider>
     );
   }
 }
+
+App.propTypes = {
+  params: React.PropTypes.object,
+};
 
 export default App;
