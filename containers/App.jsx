@@ -49,10 +49,10 @@ class App extends React.Component {
   // }
 
   componentDidUpdate() {
-    // window.console.log(this.videoSection.videoPlayer);
-    // vjs(this.videoSection.videoPlayer.id);
     const v = vjs(this.videoSection.videoPlayer.id);
     v.pause();
+    // const videoSrc = this.state.user.source[0].src;
+    // this.videoSection.videoPlayer.setAttribute('src', videoSrc);
     v.load();
     v.play();
   }
