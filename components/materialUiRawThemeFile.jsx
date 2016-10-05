@@ -2,6 +2,7 @@ import * as Colors from 'material-ui/styles/colors';
 import * as ColorManipulator from 'material-ui/utils/colorManipulator';
 import Spacing from 'material-ui/styles/spacing';
 import darkTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import assign from 'object-assign';
 
 const customStyle = {
   spacing: Spacing,
@@ -24,4 +25,4 @@ const customStyle = {
   },
 };
 
-module.exports = Object.assign(customStyle, darkTheme);
+module.exports = assign(customStyle, darkTheme);
