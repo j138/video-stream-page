@@ -7,8 +7,7 @@ import VideoSection from '../components/VideoSection';
 
 const request = require('superagent');
 
-const prefix = '/video-stream-page';
-const apiPath = '/static/config.json';
+const apiUrl = '/static/config.json';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,10 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const apiUri = prefix + apiPath;
-    window.console.log(apiUri);
-
-    request.get(apiUri)
+    request.get(apiUrl)
     .end((err, res) => {
       if (err) {
         throw err;
