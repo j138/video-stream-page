@@ -32,7 +32,7 @@ class VideoSection extends React.Component {
 
     const props = {
       id: 'main-video',
-      className: classNames('videojs', 'video-js', 'vjs-default-skin'),
+      className: classNames('video-js', 'vjs-default-skin'),
       poster: this.props.user.image,
       controls: true,
       autoPlay: false,
