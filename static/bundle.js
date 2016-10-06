@@ -27603,10 +27603,7 @@
 	          null,
 	          _react2.default.createElement(_Header2.default, {
 	            user: this.state.user,
-	            users: this.state.users,
-	            selectUser: function selectUser(v) {
-	              return _this3.setState({ user: _this3.state.users[v] });
-	            }
+	            users: this.state.users
 	          }),
 	          _react2.default.createElement(_VideoSection2.default, {
 	            ref: function ref(c) {
@@ -42635,8 +42632,7 @@
 
 	  (0, _createClass3.default)(Header, [{
 	    key: 'selectUser',
-	    value: function selectUser(v) {
-	      this.props.selectUser(v);
+	    value: function selectUser() {
 	      this.state = { open: false };
 	    }
 	  }, {
@@ -42674,7 +42670,10 @@
 	            return _react2.default.createElement(
 	              _reactRouter.Link,
 	              { key: k, to: k },
-	              _react2.default.createElement(_materialUi.MenuItem, { primaryText: '' + _this2.props.users[k].name })
+	              _react2.default.createElement(_materialUi.MenuItem, {
+	                onTapTouch: _this2.selectUser(),
+	                primaryText: '' + _this2.props.users[k].name
+	              })
 	            );
 	          })
 	        )
@@ -42692,8 +42691,7 @@
 	    user: _react2.default.PropTypes.shape({
 	      name: _react2.default.PropTypes.string
 	    })
-	  }),
-	  selectUser: _react2.default.PropTypes.func
+	  })
 	};
 
 	var _default = Header;
