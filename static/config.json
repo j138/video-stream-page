@@ -9,20 +9,6 @@
       }
     ]
   },
-  "sakuyan": {
-    "name": "sakuyan",
-    "image": "",
-    "source": [
-      {
-        "src": "rtmp://miyahira.me/rophy/kido",
-        "type": "rtmp/mp4"
-      },
-      {
-        "src": "http://miyahira.me:8081/rophyhls/kido.m3u8",
-        "type": "application/x-mpegURL"
-      }
-    ]
-  },
   "jey": {
     "name": "Jey",
     "image": "http://i.imgur.com/2Rq14GG.jpg",
@@ -33,6 +19,34 @@
       },
       {
         "src": "rtmp://miyahira.me:8081/jey3hls/kido.m3u8",
+        "type": "application/x-mpegURL"
+      }
+    ]
+  },
+  "tosiko": {
+    "name": "tosiko",
+    "image": "",
+    "source": [
+      {
+        "src": "rtmp://miyahira.me/tosiko/kido",
+        "type": "rtmp/mp4"
+      },
+      {
+        "src": "http://miyahira.me:8081/tosikohls/kido.m3u8",
+        "type": "application/x-mpegURL"
+      }
+    ]
+  },
+  "sakuyan": {
+    "name": "sakuyan",
+    "image": "",
+    "source": [
+      {
+        "src": "rtmp://miyahira.me/rophy/kido",
+        "type": "rtmp/mp4"
+      },
+      {
+        "src": "http://miyahira.me:8081/rophyhls/kido.m3u8",
         "type": "application/x-mpegURL"
       }
     ]
@@ -71,20 +85,6 @@
       },
       {
         "src": "http://miyahira.me:8081/moritahls/kido.m3u8",
-        "type": "application/x-mpegURL"
-      }
-    ]
-  },
-  "tosiko": {
-    "name": "tosiko",
-    "image": "",
-    "source": [
-      {
-        "src": "rtmp://miyahira.me/tosiko/kido",
-        "type": "rtmp/mp4"
-      },
-      {
-        "src": "http://miyahira.me:8081/tosikohls/kido.m3u8",
         "type": "application/x-mpegURL"
       }
     ]
