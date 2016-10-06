@@ -75,7 +75,9 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  params: React.PropTypes.object,
+  params: React.PropTypes.shape({
+    userName: React.PropTypes.string,
+  }),
 };
 
 export default App;

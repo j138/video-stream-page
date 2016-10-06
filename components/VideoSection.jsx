@@ -29,13 +29,13 @@ class VideoSection extends React.Component {
     }
 
     return (
-      <div
+      <video
         id="main-video"
         ref={(c) => { this.videoPlayer = c; }}
         className="video-js vjs-default-skin"
         poster={this.props.user.image}
         preload="auto"
-        controls
+        controls="true"
         data-setup='
         {
           "autoplay": false,
@@ -54,7 +54,10 @@ class VideoSection extends React.Component {
 }
 
 VideoSection.propTypes = {
-  user: React.PropTypes.object,
+  user: React.PropTypes.shape({
+    name: React.PropTypes.string,
+    image: React.PropTypes.string,
+  }),
 };
 
 export default VideoSection;

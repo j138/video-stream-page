@@ -6,7 +6,6 @@
     "node": true
   },
   "rules": {
-    "react/forbid-prop-types": 0,
     "global-require": 0
   },
   "parser": "babel-eslint",

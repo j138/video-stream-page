@@ -47,8 +47,14 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  user: React.PropTypes.object,
-  users: React.PropTypes.object,
+  user: React.PropTypes.shape({
+    name: React.PropTypes.string,
+  }),
+  users: React.PropTypes.shape({
+    user: React.PropTypes.shape({
+      name: React.PropTypes.string,
+    }),
+  }),
   selectUser: React.PropTypes.func,
 };
 
