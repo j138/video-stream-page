@@ -27533,7 +27533,7 @@
 
 	var request = __webpack_require__(608);
 
-	var apiUrl = '/config.json';
+	var apiUrl = '/static/config.json';
 
 	var App = function (_React$Component) {
 	  (0, _inherits3.default)(App, _React$Component);
