@@ -9,16 +9,6 @@
       }
     ]
   },
-  "test": {
-    "name": "test",
-    "image": "http://lolwiki-note.info/pic/skin/Lux_6.jpg",
-    "source": [
-      {
-        "src": "http://www.w3schools.com/html/mov_bbb.mp4",
-        "type": "video/mp4"
-      }
-    ]
-  },
   "sakuyan": {
     "name": "sakuyan",
     "image": "",
@@ -130,6 +120,16 @@
       {
         "src": "rtmp://miyahira.me/ym56/test",
         "type": "rtmp/mp4"
+      }
+    ]
+  },
+  "test": {
+    "name": "test",
+    "image": "http://www.html5videoplayer.net/poster/toystory.jpg",
+    "source": [
+      {
+        "src": "http://www.html5videoplayer.net/videos/toystory.mp4",
+        "type": "video/mp4"
       }
     ]
   }

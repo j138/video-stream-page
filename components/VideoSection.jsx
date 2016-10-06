@@ -1,7 +1,12 @@
 import React from 'react';
+import { CircularProgress } from 'material-ui';
 
 class VideoSection extends React.Component {
   shouldComponentUpdate(nextProps) {
+    if (nextProps.user.name === '') {
+      return false;
+    }
+
     if (nextProps.user.name !== this.props.user.name) {
       return true;
     }
@@ -10,6 +15,19 @@ class VideoSection extends React.Component {
   }
 
   render() {
+    if (this.props.user.name === '') {
+      const customStyle = {
+        paddingTop: 100,
+        textAlign: 'center',
+      };
+
+      return (
+        <div style={customStyle}>
+          <CircularProgress size={9} />
+        </div>
+      );
+    }
+
     return (
       <div
         id="main-video"
@@ -30,16 +48,10 @@ class VideoSection extends React.Component {
             "progressControl": true
           }
         }'
-      >
-        {this.props.user.source.map((v, index) =>
-          <source key={`${this.props.user.name}-${index}`} {... v} />)}
-      </div>
+      />
     );
   }
 }
-// {this.props.user.source.map((v, index) =>
-// <source key={`${this.props.user.name}-${index}`} {... v} />)}
-// src={this.props.user.source[0].src}
 
 VideoSection.propTypes = {
   user: React.PropTypes.object,

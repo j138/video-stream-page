@@ -1,5 +1,5 @@
 import React from 'react';
-import vjs from 'video.js/dist/video.min';
+import videojs from 'video.js/dist/video.min';
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
 import MyRawTheme from '../components/materialUiRawThemeFile';
 import Header from '../components/Header';
@@ -16,20 +16,21 @@ class App extends React.Component {
       user: { name: '', image: '', source: [{ src: '', type: '' }] },
       users: {},
     };
+  }
 
+  componentDidMount() {
     request.get(apiUrl)
     .end((err, res) => {
       if (err) {
         throw err;
       }
 
-      this.setState({ users: res.body });
-
-      const currentUserKey = (this.state.users[this.props.params.userName])
+      const users = res.body;
+      const currentUserKey = (users[this.props.params.userName])
       ? this.props.params.userName
-      : Object.keys(this.state.users).shift();
+      : Object.keys(users).shift();
 
-      this.setState({ user: this.state.users[currentUserKey] });
+      this.setState({ users, user: users[currentUserKey] });
     });
   }
 
@@ -37,24 +38,21 @@ class App extends React.Component {
     this.setState({ user: this.state.users[newProps.params.userName] });
   }
 
-  shouldComponentUpdate(nextProps) {
-    if (nextProps.params.userName !== this.state.user.name) {
+  shouldComponentUpdate(newProps) {
+    if (newProps.params.userName !== this.state.user.name) {
       return true;
     }
 
     return false;
   }
 
-  // componentWillUpdate() {
-  // }
-
   componentDidUpdate() {
-    const v = vjs(this.videoSection.videoPlayer.id);
+    if (!this.videoSection.videoPlayer) return;
+    const v = videojs(this.videoSection.videoPlayer);
+    v.poster(this.state.user.image);
+    v.src(this.state.user.source);
     v.pause();
-    // const videoSrc = this.state.user.source[0].src;
-    // this.videoSection.videoPlayer.setAttribute('src', videoSrc);
     v.load();
-    v.play();
   }
 
   render() {
