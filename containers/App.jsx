@@ -52,8 +52,8 @@ class App extends React.Component {
     const v = videojs(this.videoSection.videoPlayer);
     v.poster(this.state.user.image);
     v.src(this.state.user.source);
-    v.pause();
     v.load();
+    v.play();
   }
 
   render() {

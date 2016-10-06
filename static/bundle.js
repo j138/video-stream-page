@@ -27587,8 +27587,8 @@
 	      var v = (0, _video2.default)(this.videoSection.videoPlayer);
 	      v.poster(this.state.user.image);
 	      v.src(this.state.user.source);
-	      v.pause();
 	      v.load();
+	      v.play();
 	    }
 	  }, {
 	    key: 'render',
@@ -42675,7 +42675,18 @@
 	                primaryText: '' + _this2.props.users[k].name
 	              })
 	            );
-	          })
+	          }),
+	          _react2.default.createElement(_materialUi.Divider, null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'http://haishin.miyahira.me' },
+	            _react2.default.createElement(_materialUi.MenuItem, { primaryText: 'haishin.miyahira.me' })
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'http://haishin.miyahira.me/index2.html' },
+	            _react2.default.createElement(_materialUi.MenuItem, { primaryText: '\u524D\u306E\u524D' })
+	          )
 	        )
 	      );
 	    }

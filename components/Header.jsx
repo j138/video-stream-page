@@ -42,6 +42,14 @@ class Header extends React.Component {
               />
             </Link>
           )}
+          <Divider />
+          <a href="http://haishin.miyahira.me">
+            <MenuItem primaryText="haishin.miyahira.me" />
+          </a>
+
+          <a href="http://haishin.miyahira.me/index2.html">
+            <MenuItem primaryText="前の前" />
+          </a>
         </Drawer>
       </header>
     );
