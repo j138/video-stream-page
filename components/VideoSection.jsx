@@ -1,6 +1,8 @@
 import React from 'react';
 import { CircularProgress } from 'material-ui';
 
+const classNames = require('classnames');
+
 class VideoSection extends React.Component {
   shouldComponentUpdate(nextProps) {
     if (nextProps.user.name === '') {
@@ -28,17 +30,21 @@ class VideoSection extends React.Component {
       );
     }
 
+    const props = {
+      id: 'main-video',
+      className: classNames('videojs', 'video-js', 'vjs-default-skin'),
+      poster: this.props.user.image,
+      controls: true,
+      autoPlay: false,
+      preload: 'none',
+    };
+
     return (
       <video
-        id="main-video"
+        {...props}
         ref={(c) => { this.videoPlayer = c; }}
-        className="video-js vjs-default-skin"
-        poster={this.props.user.image}
-        preload="auto"
-        controls="true"
         data-setup='
         {
-          "autoplay": false,
           "nativeControlsForTouch": "true",
           "techOrder": ["flash", "html5", "other supported tech"],
           "controlBar": {

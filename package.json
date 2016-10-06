@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-material_ui-boilerplate",
+  "name": "video-stream-page",
   "version": "1.0.0",
-  "description": "A boilerplate for React + Redux + Material UI + ES6 syntax application",
+  "description": "video stream page for React + Redux + Material UI + ES6 syntax + Video.js application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +18,8 @@
     "webpack",
     "Redux",
     "Bable",
-    "ES6"
+    "ES6",
+    "video.js"
   ],
   "author": "https://github.com/",
   "license": "MIT",
