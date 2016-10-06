@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>Miyahira Stream</title>
-        <link rel="stylesheet" href="main.css" type="text/css" media="screen" charset="utf-8">
-    </head>
-    <body>
-        <div id="root"></div>
-        <script>
-            var WebFontConfig = {
-                google: { families: [ 'Roboto:400,300,500:latin' ] }
-            };
-            (function() {
-                var wf = document.createElement('script');
-                wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-                wf.type = 'text/javascript';
-                wf.async = 'true';
-
-                var s = document.getElementByTagName('script')[0];
-                s.parent.Node.insertBefore(wf, s);
-            })();
-        </script>
-        <script type="text/javascript" src="./bundle.js"></script>
-    </body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Miyahira Stream</title>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/video.js/5.11.7/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      var WebFontConfig = {
+        google: { families: [ 'Roboto:400,300,500:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <script type="text/javascript" src="./bundle.js"></script>
+  </body>
 </html>
