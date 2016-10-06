@@ -27533,7 +27533,8 @@
 
 	var request = __webpack_require__(608);
 
-	var apiUrl = '/config.json';
+	var hostName = 'http://haishin.miyahira.me/video-stream-page';
+	var apiUrl = '/static/config.json';
 
 	var App = function (_React$Component) {
 	  (0, _inherits3.default)(App, _React$Component);
@@ -27555,7 +27556,7 @@
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
-	      request.get(apiUrl).end(function (err, res) {
+	      request.get(hostName + apiUrl).end(function (err, res) {
 	        if (err) {
 	          throw err;
 	        }
@@ -27635,6 +27636,8 @@
 	  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
 	    return;
 	  }
+
+	  __REACT_HOT_LOADER__.register(hostName, 'hostName', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
 
 	  __REACT_HOT_LOADER__.register(apiUrl, 'apiUrl', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
 
