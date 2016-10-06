@@ -20,6 +20,7 @@ class App extends React.Component {
 
   componentDidMount() {
     request.get(apiUrl)
+    .accept('json')
     .end((err, res) => {
       if (err) {
         throw err;

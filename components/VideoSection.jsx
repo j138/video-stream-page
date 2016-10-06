@@ -25,7 +25,7 @@ class VideoSection extends React.Component {
 
       return (
         <div style={customStyle}>
-          <CircularProgress size={9} />
+          <CircularProgress size={280} thickness={10} />
         </div>
       );
     }

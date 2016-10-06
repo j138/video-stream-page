@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "es6-set": "^0.1.4",
     "fbjs": "^0.8.5",
     "history": "^4.3.0",
     "lodash": "^4.16.3",
