@@ -27533,12 +27533,7 @@
 
 	var request = __webpack_require__(608);
 
-<<<<<<< HEAD
 	var apiUrl = '/static/config.json';
-=======
-	var prefix = '/video-stream-page';
-	var apiPath = '/static/config.json';
->>>>>>> 940409cc4735fafd8ffb73029b820ccbdc4a86c4
 
 	var App = function (_React$Component) {
 	  (0, _inherits3.default)(App, _React$Component);
@@ -27560,10 +27555,7 @@
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
-	      var apiUri = prefix + apiPath;
-	      window.console.log(apiUri);
-
-	      request.get(apiUri).end(function (err, res) {
+	      request.get(apiUrl).end(function (err, res) {
 	        if (err) {
 	          throw err;
 	        }
@@ -27644,9 +27636,7 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(prefix, 'prefix', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
-
-	  __REACT_HOT_LOADER__.register(apiPath, 'apiPath', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
+	  __REACT_HOT_LOADER__.register(apiUrl, 'apiUrl', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
 
 	  __REACT_HOT_LOADER__.register(App, 'App', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
 
