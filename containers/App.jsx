@@ -7,8 +7,8 @@ import VideoSection from '../components/VideoSection';
 
 const request = require('superagent');
 
-const hostName = 'http://haishin.miyahira.me/video-stream-page';
-const apiUrl = '/static/config.json';
+const prefix = '/video-stream-page';
+const apiPath = '/static/config.json';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,7 +20,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    request.get(hostName + apiUrl)
+    const apiUri = prefix + apiPath;
+    window.console.log(apiUri);
+
+    request.get(apiUri)
     .end((err, res) => {
       if (err) {
         throw err;
