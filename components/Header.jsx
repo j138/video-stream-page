@@ -8,8 +8,7 @@ class Header extends React.Component {
     this.state = { open: false };
   }
 
-  selectUser(v) {
-    this.props.selectUser(v);
+  selectUser() {
     this.state = { open: false };
   }
 
@@ -37,7 +36,10 @@ class Header extends React.Component {
 
           {Object.keys(this.props.users).map(k =>
             <Link key={k} to={k}>
-              <MenuItem primaryText={`${this.props.users[k].name}`} />
+              <MenuItem
+                onTapTouch={this.selectUser()}
+                primaryText={`${this.props.users[k].name}`}
+              />
             </Link>
           )}
         </Drawer>
@@ -55,7 +57,6 @@ Header.propTypes = {
       name: React.PropTypes.string,
     }),
   }),
-  selectUser: React.PropTypes.func,
 };
 
 export default Header;

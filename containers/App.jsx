@@ -63,7 +63,6 @@ class App extends React.Component {
           <Header
             user={this.state.user}
             users={this.state.users}
-            selectUser={v => this.setState({ user: this.state.users[v] })}
           />
           <VideoSection
             ref={(c) => { this.videoSection = c; }}
