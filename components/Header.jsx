@@ -38,7 +38,7 @@ class Header extends React.Component {
             <Link key={k} to={k}>
               <MenuItem
                 onTapTouch={this.selectUser()}
-                primaryText={`${this.props.users[k].name}`}
+                primaryText={this.props.users[k].name}
               />
             </Link>
           )}

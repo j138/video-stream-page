@@ -9,25 +9,10 @@ body {
   background-color: #2B333F;
 }
 
-.video-js {
-  position: fixed;
-  right: 0;
-  top: 50px;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 90%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  background-color: #2B333F;
-  background-size: cover;
-}
-
-
-# ######################
-# video-js custom skin
-# ######################
-.video-js .vjs-menu-button-inline.vjs-slider-active,.video-js .vjs-menu-button-inline:focus,.video-js .vjs-menu-button-inline:hover,.video-js.vjs-no-flex .vjs-menu-button-inline {
+.video-js .vjs-menu-button-inline.vjs-slider-active,
+.video-js .vjs-menu-button-inline:focus,
+.video-js .vjs-menu-button-inline:hover,
+.video-js.vjs-no-flex .vjs-menu-button-inline {
     width: 10em
 }
 
@@ -47,15 +32,20 @@ body {
     left: 3em
 }
 
-.vjs-paused.vjs-has-started.video-js .vjs-big-play-button,.video-js.vjs-ended .vjs-big-play-button,.video-js.vjs-paused .vjs-big-play-button {
+.vjs-paused.vjs-has-started.video-js .vjs-big-play-button,
+.video-js.vjs-ended .vjs-big-play-button,
+.video-js.vjs-paused .vjs-big-play-button {
     display: block
 }
 
-.video-js .vjs-load-progress div,.vjs-seeking .vjs-big-play-button,.vjs-waiting .vjs-big-play-button {
+.video-js .vjs-load-progress div,
+.vjs-seeking .vjs-big-play-button,
+.vjs-waiting .vjs-big-play-button {
     display: none!important
 }
 
-.video-js .vjs-mouse-display:after,.video-js .vjs-play-progress:after {
+.video-js .vjs-mouse-display:after,
+.video-js .vjs-play-progress:after {
     padding: 0 .4em .3em
 }
 
@@ -67,14 +57,17 @@ body {
     display: block !important;
 }
 
-.video-js *,.video-js:after,.video-js:before {
+.video-js *,
+.video-js:after,
+.video-js:before {
     box-sizing: inherit;
     font-size: inherit;
     color: inherit;
     line-height: inherit
 }
 
-.video-js.vjs-fullscreen,.video-js.vjs-fullscreen .vjs-tech {
+.video-js.vjs-fullscreen,
+.video-js.vjs-fullscreen .vjs-tech {
     width: 100%!important;
     height: 100%!important
 }
@@ -88,7 +81,8 @@ body {
     color: inherit
 }
 
-.video-js .vjs-menu-button-inline:hover,.video-js.vjs-no-flex .vjs-menu-button-inline {
+.video-js .vjs-menu-button-inline:hover,
+.video-js.vjs-no-flex .vjs-menu-button-inline {
     width: 8.35em
 }
 
@@ -97,11 +91,13 @@ body {
     width: 6.35em
 }
 
-.video-js .vjs-control:focus:before,.video-js .vjs-control:hover:before {
+.video-js .vjs-control:focus:before,
+.video-js .vjs-control:hover:before {
     text-shadow: 0 0 1em #fff,0 0 1em #fff,0 0 1em #fff
 }
 
-.video-js .vjs-spacer,.video-js .vjs-time-control {
+.video-js .vjs-spacer,
+.video-js .vjs-time-control {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -136,7 +132,8 @@ body {
     margin-left: 1em
 }
 
-.video-js .vjs-time-control .vjs-current-time-display,.video-js .vjs-time-control .vjs-duration-display {
+.video-js .vjs-time-control .vjs-current-time-display,
+.video-js .vjs-time-control .vjs-duration-display {
     width: 100%
 }
 
@@ -148,7 +145,15 @@ body {
     text-align: left
 }
 
-.video-js .vjs-play-progress:before,.video-js .vjs-progress-control .vjs-play-progress:before,.video-js .vjs-remaining-time,.video-js .vjs-volume-level:after,.video-js .vjs-volume-level:before,.video-js.vjs-live .vjs-time-control.vjs-current-time,.video-js.vjs-live .vjs-time-control.vjs-duration,.video-js.vjs-live .vjs-time-control.vjs-time-divider,.video-js.vjs-no-flex .vjs-time-control.vjs-remaining-time {
+.video-js .vjs-play-progress:before,
+.video-js .vjs-progress-control .vjs-play-progress:before,
+.video-js .vjs-remaining-time,
+.video-js .vjs-volume-level:after,
+.video-js .vjs-volume-level:before,
+.video-js.vjs-live .vjs-time-control.vjs-current-time,
+.video-js.vjs-live .vjs-time-control.vjs-duration,
+.video-js.vjs-live .vjs-time-control.vjs-time-divider,
+.video-js.vjs-no-flex .vjs-time-control.vjs-remaining-time {
     display: none
 }
 
@@ -166,7 +171,9 @@ body {
     top: -.5em
 }
 
-.video-js .vjs-progress-control .vjs-load-progress,.video-js .vjs-progress-control .vjs-play-progress,.video-js .vjs-progress-control .vjs-progress-holder {
+.video-js .vjs-progress-control .vjs-load-progress,
+.video-js .vjs-progress-control .vjs-play-progress,
+.video-js .vjs-progress-control .vjs-progress-holder {
     height: 100%
 }
 
@@ -187,7 +194,11 @@ body {
     transition: transform .1s ease 0s
 }
 
-.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-control-bar,.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-control-bar,.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-active .vjs-control-bar,.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar,.video-js.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar {
+.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-control-bar,
+.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-control-bar,
+.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-active .vjs-control-bar,
+.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar,
+.video-js.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar {
     visibility: visible;
     opacity: 1;
     -webkit-backface-visibility: hidden;
@@ -203,7 +214,11 @@ body {
     transition: transform 1s ease 0s
 }
 
-.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-progress-control,.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-progress-control,.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-active .vjs-progress-control,.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-progress-control,.video-js.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-progress-control {
+.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-progress-control,
+.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-progress-control,
+.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-active .vjs-progress-control,
+.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-progress-control,
+.video-js.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-progress-control {
     height: .25em;
     top: -.25em;
     pointer-events: none;
@@ -214,7 +229,11 @@ body {
     transition: height 1s,top 1s
 }
 
-.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-active.vjs-fullscreen .vjs-progress-control,.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive.vjs-fullscreen .vjs-progress-control,.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-active.vjs-fullscreen .vjs-progress-control,.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-inactive.vjs-fullscreen .vjs-progress-control,.video-js.vjs-has-started.vjs-playing.vjs-user-inactive.vjs-fullscreen .vjs-progress-control {
+.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-active.vjs-fullscreen .vjs-progress-control,
+.video-js.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive.vjs-fullscreen .vjs-progress-control,
+.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-active.vjs-fullscreen .vjs-progress-control,
+.video-js.not-hover.vjs-has-started.vjs-playing.vjs-user-inactive.vjs-fullscreen .vjs-progress-control,
+.video-js.vjs-has-started.vjs-playing.vjs-user-inactive.vjs-fullscreen .vjs-progress-control {
     opacity: 0;
     -webkit-transition: opacity 1s ease 1s;
     -moz-transition: opacity 1s ease 1s;
@@ -258,7 +277,8 @@ body {
     padding-bottom: .5em
 }
 
-.video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-item,.video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-title {
+.video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-item,
+.video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-title {
     background-color: #151b17;
     margin: .3em 0;
     padding: .5em;
@@ -278,7 +298,9 @@ body {
     margin-top: -0.5em !important
 }
 
-.video-js:hover .vjs-big-play-button,.video-js .vjs-big-play-button:focus,.video-js .vjs-big-play-button:active {
+.video-js:hover .vjs-big-play-button,
+.video-js .vjs-big-play-button:focus,
+.video-js .vjs-big-play-button:active {
     background-color: rgba(0,0,0,0)
 }
 
@@ -296,7 +318,8 @@ body {
     font-size: 12px
 }
 
-.video-js .vjs-play-progress,.video-js  .vjs-volume-level {
+.video-js .vjs-play-progress,
+.video-js  .vjs-volume-level {
     background-color: #b99beb
 }
 
@@ -308,7 +331,8 @@ body {
     color: #b99beb;
 }
 
-.video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before {
+.video-js .vjs-control:focus:before,
+.video-js .vjs-control:hover:before {
     color: #b99beb;
     text-shadow: none
 }

@@ -1,8 +1,27 @@
 import React from 'react';
+import Radium from 'radium';
 import { CircularProgress } from 'material-ui';
 
 const classNames = require('classnames');
 
+const styles = {
+  videojs: {
+    position: 'fixed',
+    right: 0,
+    top: '50px',
+    bottom: 0,
+    minWidth: '100%',
+    minHeight: '90%',
+    width: 'auto',
+    height: 'auto',
+    zindex: -100,
+    // backgroundColor: '#2B333F',
+    backgroundColor: 'red',
+    backgroundSize: 'cover',
+  },
+};
+
+@Radium
 class VideoSection extends React.Component {
   shouldComponentUpdate(nextProps) {
     if (nextProps.user.name === '') {
@@ -41,6 +60,9 @@ class VideoSection extends React.Component {
 
     return (
       <video
+        style={[
+          styles.videojs,
+        ]}
         {...props}
         ref={(c) => { this.videoPlayer = c; }}
         data-setup='
