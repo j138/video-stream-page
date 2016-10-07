@@ -1,11 +1,10 @@
 import React from 'react';
-import videojs from 'video.js/dist/video.min';
+import request from 'superagent';
+import videojs from 'video.js/dist/video';
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
 import MyRawTheme from '../components/materialUiRawThemeFile';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
-
-const request = require('superagent');
 
 const apiUrl = '/static/config.json';
 
