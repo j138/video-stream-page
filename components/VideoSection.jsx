@@ -1,11 +1,12 @@
 import React from 'react';
 import Radium from 'radium';
-import { CircularProgress } from 'material-ui';
+
+import Loading from './Loading';
 
 const classNames = require('classnames');
 
 const styles = {
-  videojs: {
+  wideScreen: {
     position: 'fixed',
     right: 0,
     top: '50px',
@@ -15,8 +16,6 @@ const styles = {
     width: 'auto',
     height: 'auto',
     zindex: -100,
-    // backgroundColor: '#2B333F',
-    backgroundColor: 'red',
     backgroundSize: 'cover',
   },
 };
@@ -43,9 +42,7 @@ class VideoSection extends React.Component {
       };
 
       return (
-        <div style={customStyle}>
-          <CircularProgress size={280} thickness={10} />
-        </div>
+        <Loading styles={styles.wideScreen} />
       );
     }
 
@@ -61,7 +58,7 @@ class VideoSection extends React.Component {
     return (
       <video
         style={[
-          styles.videojs,
+          styles.wideScreen,
         ]}
         {...props}
         ref={(c) => { this.videoPlayer = c; }}

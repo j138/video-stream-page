@@ -25,4 +25,6 @@ const customStyle = {
   },
 };
 
-module.exports = assign(customStyle, darkTheme);
+assign(customStyle, darkTheme);
+
+module.exports = customStyle;
