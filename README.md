@@ -5,7 +5,7 @@ miyahira配信用サイト
 
 - React
 - material-ui
-- readium
+- radium
 - ES6
 - webpack
 - babel
