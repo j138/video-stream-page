@@ -6,7 +6,7 @@ import MyRawTheme from '../components/materialUiRawThemeFile';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 
-const apiUrl = '/static/config.json';
+const apiUrl = 'config.json';
 
 class App extends React.Component {
   constructor(props) {
