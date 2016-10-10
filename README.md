@@ -1,5 +1,5 @@
 ## video-stream-page
-miyahiraｙ配信用サイト
+miyahira配信用サイト
 
 ## 利用したもの
 
