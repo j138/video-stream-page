@@ -1,7 +1,10 @@
 import React from 'react';
-import { AppBar, Drawer, MenuItem, Divider } from 'material-ui';
 import { Link } from 'react-router';
+import { AppBar, Drawer, MenuItem, Divider } from 'material-ui';
+import Radium from 'radium';
+import * as styles from './styles';
 
+@Radium
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -31,11 +34,10 @@ class Header extends React.Component {
           docked={false}
           onRequestChange={open => this.setState({ open })}
         >
-          <MenuItem primaryText="Select Member" />
-          <Divider />
+          <AppBar showMenuIconButton={false} title="Select Member" />
 
           {Object.keys(this.props.users).map(k =>
-            <Link key={k} to={k}>
+            <Link key={k} to={k} style={styles.drawerItem}>
               <MenuItem
                 onTapTouch={this.selectUser()}
                 primaryText={this.props.users[k].name}

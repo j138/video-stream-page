@@ -1,8 +1,9 @@
 module.exports = {
   context: __dirname,
   entry: {
+    json: './src/config.json',
     jsx: './src/index.jsx',
-    css: './src/main.css',
+    css: ['./src/main.css', './src/videojs-custom.css'],
     html: './src/index.html',
   },
 

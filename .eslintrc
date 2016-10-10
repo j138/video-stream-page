@@ -9,6 +9,9 @@
   "plugins": [
     "react"
   ],
+  "rules": {
+    "linebreak-style": 0
+  },
   "ecmaFeatures": {
     "arrowFunctions": true,
     "experimentalObjectRestSpread": true,

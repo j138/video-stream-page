@@ -1,26 +1,20 @@
 import React from 'react';
 import { CircularProgress } from 'material-ui';
-import assign from 'object-assign';
+import radium from 'radium';
+import * as styles from './styles';
 
-class Loading extends React.Component {
-  render() {
-    const customStyle = {
-      paddingTop: 100,
-      textAlign: 'center',
-    };
+const customStyle = {
+  paddingTop: 100,
+};
 
-    return (
-      <div style={assign(customStyle, this.props.styles)}>
-        <CircularProgress size={280} thickness={10} />
-      </div>
-    );
-  }
-}
+const Loading = () => (
+  <div style={[customStyle, styles.wideScreen]}>
+    <CircularProgress size={320} thickness={12} />
+  </div>
+);
 
-// Loading.propTypes = {
-//   styles: React.PropTypes.shape({
-//     wideScreen: React.PropTypes.object,
-//   }),
-// };
+Loading.propTypes = {
+  styles: React.PropTypes.shape,
+};
 
-export default Loading;
+export default radium(Loading);
