@@ -33,9 +33,7 @@ class VideoSection extends React.Component {
 
     return (
       <video
-        style={[
-          styles.wideScreen,
-        ]}
+        style={styles.wideScreen}
         {...props}
         ref={(c) => { this.videoPlayer = c; }}
         data-setup='

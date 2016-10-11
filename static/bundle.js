@@ -96503,7 +96503,7 @@
 	      };
 
 	      return _react2.default.createElement('video', (0, _extends3.default)({
-	        style: [styles.wideScreen]
+	        style: styles.wideScreen
 	      }, props, {
 	        ref: function ref(c) {
 	          _this2.videoPlayer = c;
@@ -96579,10 +96579,6 @@
 	    { style: [customStyle, styles.wideScreen] },
 	    _react2.default.createElement(_materialUi.CircularProgress, { size: 320, thickness: 12 })
 	  );
-	};
-
-	Loading.propTypes = {
-	  styles: _react2.default.PropTypes.shape
 	};
 
 	var _default = (0, _radium2.default)(Loading);

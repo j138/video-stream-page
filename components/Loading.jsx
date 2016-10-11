@@ -13,8 +13,4 @@ const Loading = () => (
   </div>
 );
 
-Loading.propTypes = {
-  styles: React.PropTypes.shape,
-};
-
 export default radium(Loading);

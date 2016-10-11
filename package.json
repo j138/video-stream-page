@@ -1,7 +1,7 @@
 {
   "name": "video-stream-page",
   "version": "1.0.0",
-  "description": "video stream page for React + Redux + Material UI + ES6 syntax + Video.js application",
+  "description": "video stream page for React + Redux + Material UI + Radium + ES6 syntax + Video.js application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -50,7 +50,6 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "file-loader": "^0.9.0",
-    "json-loader": "^0.5.4",
     "style-loader": "^0.13.1",
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^1.13.2",
