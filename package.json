@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix .",
     "start": "webpack-dev-server --hot --inline --progress --colors",
     "start-production": "webpack-dev-server --config webpack.config.production.js --hot --inline --progress --colors",
     "build-debug": "webpack --display-error-details --progress --colors",
@@ -16,6 +18,7 @@
   },
   "keywords": [
     "React",
+    "material-ui",
     "webpack",
     "radium",
     "Bable",
@@ -44,15 +47,15 @@
     "eslint-config-airbnb": "^12.0.0",
     "eslint-loader": "^1.5.0",
     "eslint-plugin-import": "^1.16.0",
-    "eslint-plugin-jsx-a11y": "^2.2.2",
-    "eslint-plugin-react": "^6.3.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
     "file-loader": "^0.9.0",
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.1",
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2",
-    "webpack-hot-middleware": "^2.12.2"
+    "webpack-hot-middleware": "^2.13.0"
   },
   "dependencies": {
     "browserify": "^13.1.0",

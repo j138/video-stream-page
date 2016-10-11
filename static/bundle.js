@@ -88,7 +88,7 @@
 
 	;
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\src\\index.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\src\\index.jsx"); } } })();
+	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Users/t00114/src/github.com/j138/video-stream-page/src/index.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/t00114/src/github.com/j138/video-stream-page/src/index.jsx"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
@@ -27537,7 +27537,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var apiUrl = '/static/config.json';
+	var apiUrl = 'config.json';
 
 	var App = function (_React$Component) {
 	  (0, _inherits3.default)(App, _React$Component);
@@ -27637,16 +27637,16 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(apiUrl, 'apiUrl', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\containers\\App.jsx');
+	  __REACT_HOT_LOADER__.register(apiUrl, 'apiUrl', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
 
-	  __REACT_HOT_LOADER__.register(App, 'App', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\containers\\App.jsx');
+	  __REACT_HOT_LOADER__.register(App, 'App', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\containers\\App.jsx');
+	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx');
 	}();
 
 	;
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\containers\\App.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\containers\\App.jsx"); } } })();
+	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/t00114/src/github.com/j138/video-stream-page/containers/App.jsx"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
@@ -61196,12 +61196,12 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(customStyle, 'customStyle', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\materialUiRawThemeFile.jsx');
+	  __REACT_HOT_LOADER__.register(customStyle, 'customStyle', '/Users/t00114/src/github.com/j138/video-stream-page/components/materialUiRawThemeFile.jsx');
 	}();
 
 	;
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\materialUiRawThemeFile.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\materialUiRawThemeFile.jsx"); } } })();
+	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Users/t00114/src/github.com/j138/video-stream-page/components/materialUiRawThemeFile.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/t00114/src/github.com/j138/video-stream-page/components/materialUiRawThemeFile.jsx"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
@@ -61355,14 +61355,14 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(Header, 'Header', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\Header.jsx');
+	  __REACT_HOT_LOADER__.register(Header, 'Header', '/Users/t00114/src/github.com/j138/video-stream-page/components/Header.jsx');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\Header.jsx');
+	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/t00114/src/github.com/j138/video-stream-page/components/Header.jsx');
 	}();
 
 	;
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\Header.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\Header.jsx"); } } })();
+	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Users/t00114/src/github.com/j138/video-stream-page/components/Header.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/t00114/src/github.com/j138/video-stream-page/components/Header.jsx"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
@@ -96407,7 +96407,7 @@
 
 	;
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\styles.js"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\styles.js"); } } })();
+	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Users/t00114/src/github.com/j138/video-stream-page/components/styles.js"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/t00114/src/github.com/j138/video-stream-page/components/styles.js"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
@@ -96508,7 +96508,7 @@
 	        ref: function ref(c) {
 	          _this2.videoPlayer = c;
 	        },
-	        'data-setup': '\r {\r "nativeControlsForTouch": "true",\r "techOrder": ["flash", "html5", "other supported tech"],\r "controlBar": {\r "muteToggle": true,\r "timeDivider": false,\r "durationDisplay": true,\r "progressControl": true\r }\r }'
+	        'data-setup': ' { "nativeControlsForTouch": "true", "techOrder": ["flash", "html5", "other supported tech"], "controlBar": { "muteToggle": true, "timeDivider": false, "durationDisplay": true, "progressControl": true } }'
 	      }));
 	    }
 	  }]);
@@ -96531,14 +96531,14 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(VideoSection, 'VideoSection', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\VideoSection.jsx');
+	  __REACT_HOT_LOADER__.register(VideoSection, 'VideoSection', '/Users/t00114/src/github.com/j138/video-stream-page/components/VideoSection.jsx');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\VideoSection.jsx');
+	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/t00114/src/github.com/j138/video-stream-page/components/VideoSection.jsx');
 	}();
 
 	;
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\VideoSection.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\VideoSection.jsx"); } } })();
+	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Users/t00114/src/github.com/j138/video-stream-page/components/VideoSection.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/t00114/src/github.com/j138/video-stream-page/components/VideoSection.jsx"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
@@ -96595,16 +96595,16 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(customStyle, 'customStyle', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\Loading.jsx');
+	  __REACT_HOT_LOADER__.register(customStyle, 'customStyle', '/Users/t00114/src/github.com/j138/video-stream-page/components/Loading.jsx');
 
-	  __REACT_HOT_LOADER__.register(Loading, 'Loading', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\Loading.jsx');
+	  __REACT_HOT_LOADER__.register(Loading, 'Loading', '/Users/t00114/src/github.com/j138/video-stream-page/components/Loading.jsx');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:\\Users\\\u3062\u3047\u3044\\src\\github.com\\j138\\video-stream-page\\components\\Loading.jsx');
+	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/t00114/src/github.com/j138/video-stream-page/components/Loading.jsx');
 	}();
 
 	;
 
-	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\Loading.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "C:\\Users\\ぢぇい\\src\\github.com\\j138\\video-stream-page\\components\\Loading.jsx"); } } })();
+	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Users/t00114/src/github.com/j138/video-stream-page/components/Loading.jsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Users/t00114/src/github.com/j138/video-stream-page/components/Loading.jsx"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },

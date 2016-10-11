@@ -12,8 +12,8 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    headers: { "Access-Control-Allow-Origin": "*" },
-    host: 'stream.miyahira.me'
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    host: 'stream.miyahira.me',
   },
   module: {
     preLoaders: [
@@ -33,5 +33,4 @@ module.exports = {
     configFile: './.eslintrc',
   },
 };
-
 
