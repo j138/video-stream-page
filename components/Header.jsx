@@ -39,7 +39,7 @@ class Header extends React.Component {
           {Object.keys(this.props.users).map(k =>
             <Link key={k} to={k} style={styles.drawerItem}>
               <MenuItem
-                onTapTouch={this.selectUser()}
+                onTouchTap={() => this.selectUser()}
                 primaryText={this.props.users[k].name}
               />
             </Link>
