@@ -61312,7 +61312,9 @@
 	              _reactRouter.Link,
 	              { key: k, to: k, style: styles.drawerItem },
 	              _react2.default.createElement(_materialUi.MenuItem, {
-	                onTapTouch: _this2.selectUser(),
+	                onTouchTap: function onTouchTap() {
+	                  return _this2.selectUser();
+	                },
 	                primaryText: _this2.props.users[k].name
 	              })
 	            );
