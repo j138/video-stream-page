@@ -11,20 +11,31 @@ class Header extends React.Component {
     this.state = { open: false };
   }
 
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.user.name === '') return false;
+    return true;
+  }
+
   selectUser() {
     this.state = { open: false };
   }
 
   render() {
+    const links = [
+      {
+        href: 'http://haishin.miyahira.me',
+        text: 'haishin.miyahira.me',
+      },
+      {
+        href: 'http://haishin.miyahira.me/index2.html',
+        text: '前の前',
+      },
+    ];
+
     return (
       <header>
         <AppBar
-          title={
-            <div>
-              Miyahira Stream: &nbsp;
-              {this.props.user.name}
-            </div>
-          }
+          title={`Miyahira Stream: ${this.props.user.name}`}
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
@@ -44,14 +55,15 @@ class Header extends React.Component {
               />
             </Link>,
           )}
-          <Divider />
-          <a href="http://haishin.miyahira.me">
-            <MenuItem primaryText="haishin.miyahira.me" />
-          </a>
 
-          <a href="http://haishin.miyahira.me/index2.html">
-            <MenuItem primaryText="前の前" />
-          </a>
+          <Divider />
+
+          {links.map(v =>
+            <a key={v.href} href={v.href}>
+              <MenuItem primaryText={v.text} />
+            </a>,
+          )}
+
         </Drawer>
       </header>
     );

@@ -5,6 +5,7 @@ import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
 import MyRawTheme from '../components/materialUiRawThemeFile';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
+import Loading from '../components/Loading';
 
 const apiUrl = 'config.json';
 
@@ -56,6 +57,8 @@ class App extends React.Component {
   }
 
   render() {
+    if (this.state.user.name === '') return <Loading />;
+
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(MyRawTheme)}>
         <div>
