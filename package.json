@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix .",
-    "start": "webpack-dev-server --hot --inline --progress --colors",
-    "start-production": "webpack-dev-server --config webpack.config.production.js --hot --inline --progress --colors",
+    "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
+    "start-production": "webpack-dev-server --config webpack.config.production.js --history-api-fallback --hot --inline --progress --colors",
     "build-debug": "webpack --display-error-details --progress --colors",
     "build": "webpack --progress --colors",
     "ncu": "ncu -a -x 'eslint-plugin-jsx-a11y'"

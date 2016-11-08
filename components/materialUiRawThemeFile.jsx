@@ -9,7 +9,7 @@ const customStyle = {
     height: 50,
   },
   palette: {
-    primary1Color: Colors.deepPurple200,
+    primary1Color: Colors.deepPurple300,
     primary2Color: Colors.cyan700,
     primary3Color: Colors.grey600,
     accent1Color: Colors.pinkA200,
