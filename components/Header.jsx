@@ -42,7 +42,7 @@ class Header extends React.Component {
                 onTouchTap={() => this.selectUser()}
                 primaryText={this.props.users[k].name}
               />
-            </Link>
+            </Link>,
           )}
           <Divider />
           <a href="http://haishin.miyahira.me">

@@ -1,8 +1,6 @@
 import * as Colors from 'material-ui/styles/colors';
 import * as ColorManipulator from 'material-ui/utils/colorManipulator';
 import Spacing from 'material-ui/styles/spacing';
-import darkTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import assign from 'object-assign';
 
 const customStyle = {
   spacing: Spacing,
@@ -11,20 +9,21 @@ const customStyle = {
     height: 50,
   },
   palette: {
-    primary1Color: Colors.cyan500,
+    primary1Color: Colors.deepPurple200,
     primary2Color: Colors.cyan700,
-    primary3Color: Colors.lightBlack,
+    primary3Color: Colors.grey600,
     accent1Color: Colors.pinkA200,
-    accent2Color: Colors.grey100,
-    accent3Color: Colors.grey500,
-    textColor: Colors.darkBlack,
-    alternateTextColor: Colors.white,
-    canvasColor: Colors.white,
-    borderColor: Colors.grey300,
-    disabledColor: ColorManipulator.fade(Colors.darkBlack, 0.3),
+    accent2Color: Colors.pinkA400,
+    accent3Color: Colors.pinkA100,
+    textColor: Colors.fullWhite,
+    secondaryTextColor: ColorManipulator.fade(Colors.fullWhite, 0.7),
+    alternateTextColor: '#303030',
+    canvasColor: '#303030',
+    borderColor: ColorManipulator.fade(Colors.fullWhite, 0.3),
+    disabledColor: ColorManipulator.fade(Colors.fullWhite, 0.3),
+    pickerHeaderColor: ColorManipulator.fade(Colors.fullWhite, 0.12),
+    clockCircleColor: ColorManipulator.fade(Colors.fullWhite, 0.12),
   },
 };
-
-assign(customStyle, darkTheme);
 
 module.exports = customStyle;
