@@ -35,7 +35,7 @@ class Header extends React.Component {
     return (
       <header>
         <AppBar
-          title={`Miyahira Stream: ${this.props.user.name}`}
+          title={`Miyahira Livestream@${this.props.user.name}`}
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
@@ -45,24 +45,22 @@ class Header extends React.Component {
           docked={false}
           onRequestChange={open => this.setState({ open })}
         >
-          <AppBar showMenuIconButton={false} title="Select Member" />
+          <AppBar showMenuIconButton={false} title="Select Livestream" />
 
-          {Object.keys(this.props.users).map(k =>
+          {Object.keys(this.props.users).map(k => (
             <Link key={k} to={k} style={styles.drawerItem}>
               <MenuItem
                 onTouchTap={() => this.selectUser()}
                 primaryText={this.props.users[k].name}
               />
-            </Link>,
-          )}
+            </Link>))}
 
           <Divider />
 
-          {links.map(v =>
+          {links.map(v => (
             <a key={v.href} href={v.href}>
               <MenuItem primaryText={v.text} />
-            </a>,
-          )}
+            </a>))}
 
         </Drawer>
       </header>

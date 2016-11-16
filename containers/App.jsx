@@ -1,8 +1,7 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import request from 'superagent';
 import videojs from 'video.js/dist/video';
-import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
-import MyRawTheme from '../components/materialUiRawThemeFile';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 import Loading from '../components/Loading';
@@ -60,7 +59,8 @@ class App extends React.Component {
     if (this.state.user.name === '') return <Loading />;
 
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(MyRawTheme)}>
+      <div>
+        <Helmet title={this.state.user.name} />
         <div>
           <Header
             user={this.state.user}
@@ -71,7 +71,7 @@ class App extends React.Component {
             user={this.state.user}
           />
         </div>
-      </MuiThemeProvider>
+      </div>
     );
   }
 }
