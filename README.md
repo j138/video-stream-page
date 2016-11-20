@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/j138/video-stream-page/tree/master.svg?style=svg)](https://circleci.com/gh/j138/video-stream-page/tree/master)
+
 ## video-stream-page
 miyahira配信用サイト
 
