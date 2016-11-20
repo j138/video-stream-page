@@ -4,8 +4,7 @@
   "description": "video stream page for React + Material UI + Radium + ES6 syntax + Video.js application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "test2": "npm run eslint -- --format=junit -o $CIRCLE_TEST_REPORTS/eslint/eslint.xml",
+    "test": "npm run eslint .",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix .",
     "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
