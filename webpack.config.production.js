@@ -1,19 +1,20 @@
 module.exports = {
   context: __dirname,
   entry: {
+    json: './src/config.json',
     jsx: './src/index.jsx',
-    css: './src/main.css',
+    css: ['./src/main.css', './src/videojs-custom.css'],
     html: './src/index.html',
   },
 
   output: {
     path: `${__dirname}/static`,
-    publicPath: 'http://stream.miyahira.me/',
+    publicPath: 'https://miyahira-video-stream.herokuapp.com/',
     filename: 'bundle.js',
   },
   devServer: {
     headers: { 'Access-Control-Allow-Origin': '*' },
-    host: 'stream.miyahira.me',
+    host: 'miyahira-video-stream.herokuapp.com',
   },
   module: {
     preLoaders: [
@@ -33,4 +34,3 @@ module.exports = {
     configFile: './.eslintrc',
   },
 };
-

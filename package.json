@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix .",
-    "web": "npm start",
+    "web": "npm start-production",
     "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
     "start-production": "webpack-dev-server --config webpack.config.production.js --history-api-fallback --hot --inline --progress --colors",
     "build-debug": "webpack --display-error-details --progress --colors",
