@@ -9,7 +9,7 @@ module.exports = {
 
   output: {
     path: `${__dirname}/static`,
-    publicPath: 'https://miyahira-video-stream.herokuapp.com/',
+    publicPath: '/',
     filename: 'bundle.js',
   },
   devServer: {
