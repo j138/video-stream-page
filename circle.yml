@@ -12,4 +12,4 @@ dependencies:
     - yarn install
 test:
   override:
-    - ./node_modules/.bin/eslint --format=junit -o $CIRCLE_TEST_REPORTS/eslint/eslint.xml .
+    - npm run eslint -- --format=junit -o $CIRCLE_TEST_REPORTS/eslint/eslint.xml .
