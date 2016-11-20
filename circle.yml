@@ -1,6 +1,8 @@
 machine:
   node:
     version: 7.1.0
+  timezone:
+    Asia/Tokyo
   post:
     - curl -o- -L https://yarnpkg.com/install.sh | bash
 dependencies:
