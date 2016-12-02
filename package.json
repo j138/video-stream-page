@@ -7,9 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix .",
-    "web": "npm run start:production",
     "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
-    "start:production": "webpack-dev-server --host 0.0.0.0 --port 80 --history-api-fallback --hot --inline --progress --colors",
     "build-debug": "webpack --display-error-details --progress --colors",
     "build": "webpack --progress --colors",
     "ncu": "ncu -a -x 'eslint-plugin-jsx-a11y'"
