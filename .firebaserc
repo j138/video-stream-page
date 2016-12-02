@@ -1,5 +1,11 @@
 {
   "projects": {
     "default": "video-stream-page"
-  }
+  },
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/index.html"
+    }
+  ]
 }
