@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "video-stream-page"
+    "default": "miyahira-stream"
   },
   "hosting": {
     "public": "static",
