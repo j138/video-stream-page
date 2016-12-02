@@ -10,6 +10,7 @@
     "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
     "build-debug": "webpack --display-error-details --progress --colors",
     "build": "webpack --progress --colors",
+    "deploy": "npm run build && firebase deploy",
     "ncu": "ncu -a -x 'eslint-plugin-jsx-a11y'"
   },
   "repository": {
@@ -50,6 +51,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.7.1",
     "file-loader": "^0.9.0",
+    "firebase-tools": "3.2.0",
     "style-loader": "^0.13.1",
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^1.13.3",
