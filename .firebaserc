@@ -1,12 +1,5 @@
 {
   "projects": {
     "default": "miyahira-stream"
-  },
-  "hosting": {
-    "public": "static",
-    "rewrites": [ {
-      "source": "**",
-      "destination": "/index.html"
-    } ]
   }
 }
