@@ -17,3 +17,7 @@ miyahira配信用サイト
 
 - `/src/config.json`を雰囲気で更新
 - `npm run build`すると`./static`に更新される
+
+
+## 公開サイト
+[Miyahira Livestream](https://video-stream-page.firebaseapp.com/ "Miyahira Livestream")
