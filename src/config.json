@@ -37,20 +37,6 @@
       }
     ]
   },
-  "sakuyan": {
-    "name": "sakuyan",
-    "image": "",
-    "source": [
-      {
-        "src": "rtmp://miyahira.me/rophy/kido",
-        "type": "rtmp/mp4"
-      },
-      {
-        "src": "http://miyahira.me:8081/rophyhls/kido.m3u8",
-        "type": "application/x-mpegURL"
-      }
-    ]
-  },
   "nomura": {
     "name": "Nomuran",
     "image": "",
@@ -89,13 +75,17 @@
       }
     ]
   },
-  "fine": {
-    "name": "fine",
+  "sakuyan": {
+    "name": "sakuyan",
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/araki/kido",
+        "src": "rtmp://miyahira.me/rophy/kido",
         "type": "rtmp/mp4"
+      },
+      {
+        "src": "http://miyahira.me:8081/rophyhls/kido.m3u8",
+        "type": "application/x-mpegURL"
       }
     ]
   },
@@ -110,6 +100,16 @@
       {
         "src": "http://miyahira.me:8081/booyahls/kido.m3u8",
         "type": "application/x-mpegURL"
+      }
+    ]
+  },
+  "fine": {
+    "name": "fine",
+    "image": "",
+    "source": [
+      {
+        "src": "rtmp://miyahira.me/araki/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
