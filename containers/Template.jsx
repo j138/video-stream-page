@@ -10,7 +10,7 @@ const Template = props => (
     <div>
       <Helmet
         defaultTitle={title}
-        titleTemplate={`%s - ${title}`}
+        titleTemplate={`$%s@{title}`
       />
       {props.children}
     </div>
