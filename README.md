@@ -16,7 +16,7 @@ miyahira配信用サイト
 ## 配信者更新
 
 - `/src/config.json`を雰囲気で更新
-- `npm run build`すると`./static`に更新される
+- `npm run build`すると`./public`に更新される
 
 
 ## 公開サイト
