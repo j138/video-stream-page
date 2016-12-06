@@ -35,7 +35,7 @@ class Header extends React.Component {
     return (
       <header>
         <AppBar
-          title={`Miyahira Livestream@${this.props.user.name}`}
+          title={`${this.props.user.name}@Miyahira Livestream`}
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
