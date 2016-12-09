@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import videojs from 'video.js/dist/video.min';
+import videojs from 'video.js/es5/video';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 import Loading from '../components/Loading';
