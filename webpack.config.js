@@ -1,7 +1,8 @@
 module.exports = {
   context: __dirname,
   entry: {
-    json: './src/config.json',
+    // png: './src/favicon.png',
+    json: ['./src/config.json'],
     jsx: './src/index.jsx',
     css: ['./src/main.css', './src/videojs-custom.css'],
     html: './src/index.html',
@@ -20,9 +21,8 @@ module.exports = {
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'eslint-loader' },
     ],
     loaders: [
-      { test: /\.(png|jpg)$/, loader: 'file?name=[name].[ext]' },
-      { test: /\.json$/, loader: 'file?name=[name].[ext]' },
-      { test: /\.html$/, loader: 'file?name=[name].[ext]' },
+      { test: /\.json$/, exclude: /node_modules/, loader: 'json-loader' },
+      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.html$/, loader: 'file?name=[name].[ext]' },
       { test: /\.css$/, loader: 'file?name=[name].[ext]' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel-loader'] },
     ],
@@ -34,3 +34,4 @@ module.exports = {
     configFile: './.eslintrc',
   },
 };
+
