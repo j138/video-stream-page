@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 import Loading from '../components/Loading';
 import users from '../src/users.json';
+import favicon from '../src/favicon.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,7 +47,12 @@ class App extends React.Component {
 
     return (
       <div>
-        <Helmet title={this.state.user.name} />
+        <Helmet
+          title={this.state.user.name}
+          link={[
+            { rel: 'icon', type: 'image/png', href: favicon },
+          ]}
+        />
         <div>
           <Header
             user={this.state.user}
