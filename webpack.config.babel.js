@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const extractCSS = new ExtractTextPlugin('styles.css');
@@ -31,6 +30,13 @@ module.exports = {
       { test: /\.gif$|\.svg$|\.woff$|\.ttf$|\.html$|\.swf$|\.htaccess$/, loader: 'file?name=[name].[ext]' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel'] },
     ],
+  },
+  cache: true,
+  debug: true,
+  devtool: false,
+  stats: {
+    colors: true,
+    reasons: false,
   },
   plugins: [
     extractCSS,
