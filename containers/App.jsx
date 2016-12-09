@@ -4,7 +4,7 @@ import videojs from 'video.js/dist/video.min';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 import Loading from '../components/Loading';
-import users from '../src/config.json';
+import users from '../src/users.json';
 
 class App extends React.Component {
   constructor(props) {

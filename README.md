@@ -15,7 +15,7 @@ miyahira配信用サイト
 
 ## 配信者更新
 
-- `/src/config.json`を雰囲気で更新
+- `/src/users.json`を雰囲気で更新
 - `npm run build`すると`./public`に更新される
 
 

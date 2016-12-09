@@ -2,7 +2,7 @@ module.exports = {
   context: __dirname,
   entry: {
     // png: './src/favicon.png',
-    json: ['./src/config.json'],
+    json: ['./src/users.json'],
     jsx: './src/index.jsx',
     css: ['./src/main.css', './src/videojs-custom.css'],
     html: './src/index.html',
