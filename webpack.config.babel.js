@@ -25,9 +25,8 @@ module.exports = {
     ],
     loaders: [
       { test: /\.css$/, loader: extractCSS.extract('css') },
-      { test: /\.json$/, loader: 'json' },
       { test: /\.jpe?g$|\.png$/, loader: 'url' },
-      { test: /\.gif$|\.svg$|\.woff$|\.ttf$|\.html$|\.swf$|\.htaccess$/, loader: 'file?name=[name].[ext]' },
+      { test: /\.gif$|\.svg$|\.woff$|\.ttf$|\.html$|\.json$|\.htaccess$/, loader: 'file?name=[name].[ext]' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel'] },
     ],
   },
