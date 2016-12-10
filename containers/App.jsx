@@ -59,25 +59,16 @@ class App extends React.Component {
   }
 
   render() {
-    if (this.state.user.name === '') return <Loading />;
+    const { user, users } = this.state;
+
+    if (user.name === '') return <Loading />;
 
     return (
       <div>
-        <Helmet
-          title={this.state.user.name}
-          link={[
-            { rel: 'icon', type: 'image/png', href: favicon },
-          ]}
-        />
+        <Helmet title={user.name} link={[{ rel: 'icon', type: 'image/png', href: favicon }]} />
         <div>
-          <Header
-            user={this.state.user}
-            users={this.state.users}
-          />
-          <VideoSection
-            ref={(c) => { this.videoSection = c; }}
-            user={this.state.user}
-          />
+          <Header user={user} users={users} />
+          <VideoSection ref={(c) => { this.videoSection = c; }} user={user} />
         </div>
       </div>
     );
