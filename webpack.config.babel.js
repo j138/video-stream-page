@@ -24,9 +24,10 @@ module.exports = {
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'eslint' },
     ],
     loaders: [
+      { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
       { test: /\.css$/, loader: extractCSS.extract('css') },
       { test: /\.jpe?g$|\.png$/, loader: 'url' },
-      { test: /\.gif$|\.svg$|\.woff$|\.ttf$|\.html$|\.json$|\.htaccess$/, loader: 'file?name=[name].[ext]' },
+      { test: /\.gif$|\.html$|\.json$|\.htaccess$/, loader: 'file?name=[name].[ext]' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel'] },
     ],
   },

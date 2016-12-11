@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { AppBar, Drawer, MenuItem, Divider } from 'material-ui';
+import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
+import SocialMood from 'material-ui/svg-icons/social/mood';
+
 import * as styles from './styles';
 
 @Radium
@@ -37,7 +39,11 @@ class Header extends React.Component {
         <AppBar
           title={`${this.props.user.name}@Miyahira Livestream`}
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
+          iconElementRight={
+            <IconButton href="https://github.com/j138/video-stream-page" tooltipPosition="bottom-right">
+              <SocialMood />
+            </IconButton>
+          }
         />
 
         <Drawer
@@ -58,7 +64,7 @@ class Header extends React.Component {
           <Divider />
 
           {links.map(v => (
-            <a key={v.href} href={v.href}>
+            <a key={v.href} href={v.href} style={{ textDecoration: 'none' }}>
               <MenuItem primaryText={v.text} />
             </a>))}
 
