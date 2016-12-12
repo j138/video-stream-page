@@ -7,6 +7,8 @@ import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
 import MyRawTheme from '../components/materialUiRawThemeFile';
 import Template from '../containers/Template';
 import App from '../containers/App';
+import './main.css';
+import './videojs-custom.css';
 
 window.React = React;
 ReactGA.initialize('UA-88356342-1');
