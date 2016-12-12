@@ -132,4 +132,4 @@ dump.rdb
 .tags
 
 public/*
-!public/.htaccess
+.gitkeep
