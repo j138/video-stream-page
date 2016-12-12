@@ -1,4 +1,5 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const extractCSS = new ExtractTextPlugin('styles.css');
 
@@ -9,7 +10,6 @@ module.exports = {
     jsx: './src/index.jsx',
     css: ['./src/main.css', './src/videojs-custom.css'],
     html: './src/index.html',
-    // static: ['./src/.htaccess'],
   },
   output: {
     path: `${__dirname}/public`,
@@ -26,9 +26,9 @@ module.exports = {
     loaders: [
       { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
       { test: /\.css$/, loader: extractCSS.extract('css') },
-      { test: /\.jpe?g$|\.png$/, loader: 'url' },
-      { test: /\.gif$|\.html$|\.json$|\.htaccess$/, loader: 'file?name=[name].[ext]' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel'] },
+      { test: /\.jpe?g$|\.png$/, loader: 'url' },
+      { test: /\.(gif|html|json)$/, loader: 'file?name=[name].[ext]' },
     ],
   },
   cache: true,
@@ -40,6 +40,10 @@ module.exports = {
   },
   plugins: [
     extractCSS,
+    new CopyWebpackPlugin([
+      { from: './src/_redirects' },
+      { from: './src/.htaccess' },
+    ]),
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
