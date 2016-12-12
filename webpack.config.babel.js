@@ -2,15 +2,11 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ManifestPlugin from 'webpack-manifest-plugin';
 import ChunkManifestPlugin from 'chunk-manifest-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-
-const extractCSS = new ExtractTextPlugin('styles.css');
 
 module.exports = {
   context: __dirname,
   entry: {
     jsx: './src/index.jsx',
-    css: ['./src/main.css', './src/videojs-custom.css'],
   },
   output: {
     path: `${__dirname}/public`,
@@ -25,8 +21,9 @@ module.exports = {
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'eslint' },
     ],
     loaders: [
+      // { test: /\.css$/, loaders: ['style', 'css?modules'] },
+      { test: /\.css$/, loaders: ['style', 'css'] },
       { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
-      { test: /\.css$/, loader: extractCSS.extract('css') },
       { test: /\.json/, loader: 'json' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel'] },
       { test: /\.jpe?g$|\.png$/, loader: 'url' },
@@ -41,7 +38,6 @@ module.exports = {
     reasons: false,
   },
   plugins: [
-    extractCSS,
     new CopyWebpackPlugin([
       { from: './src/_redirects' },
       { from: './src/.htaccess' },
