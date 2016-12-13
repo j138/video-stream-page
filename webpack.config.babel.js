@@ -32,7 +32,7 @@ module.exports = {
   },
   cache: true,
   debug: true,
-  devtool: false,
+  devtool: 'inline-source-map',
   stats: {
     colors: true,
     reasons: false,
