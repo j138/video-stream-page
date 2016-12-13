@@ -21,13 +21,11 @@ module.exports = {
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'eslint' },
     ],
     loaders: [
-      // { test: /\.css$/, loaders: ['style', 'css?modules'] },
-      { test: /\.css$/, loaders: ['style', 'css'] },
-      { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
-      { test: /\.json/, loader: 'json' },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel'] },
-      { test: /\.jpe?g$|\.png$/, loader: 'url' },
-      { test: /\.(gif|html)$/, loader: 'file?name=[name].[ext]' },
+      { test: /\.css$/, loaders: ['style', 'css'] },
+      { test: /\.json/, loader: 'json' },
+      { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
+      { test: /\.(jpe?g|png|gif)$/, loader: 'url' },
     ],
   },
   cache: true,
@@ -39,9 +37,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: './src/_redirects' },
-      { from: './src/.htaccess' },
-      { from: './src/users.json' },
+      { from: { glob: './src/static/*', dot: true }, to: '[name].[ext]' },
     ]),
     new ManifestPlugin(),
     new ChunkManifestPlugin({
