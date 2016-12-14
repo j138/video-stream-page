@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "http://github.com/j138/video-stream-page"
   },
   "keywords": [
     "React",
@@ -27,12 +27,11 @@
     "ES6",
     "video.js"
   ],
-  "author": "https://github.com/",
   "license": "MIT",
   "bugs": {
     "url": ""
   },
-  "homepage": "",
+  "homepage": "https://stream.jey3dayo.net/",
   "devDependencies": {
     "babel-core": "^6.20.0",
     "babel-eslint": "^7.1.1",
