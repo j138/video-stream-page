@@ -2,8 +2,13 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ManifestPlugin from 'webpack-manifest-plugin';
 import ChunkManifestPlugin from 'chunk-manifest-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import merge from 'webpack-merge';
 
-module.exports = {
+const config = process.env.NODE_ENV === 'production' ?
+  require('./webpack.config.prod.babel.js') :
+  require('./webpack.config.dev.babel.js');
+
+const common = {
   context: __dirname,
   entry: {
     jsx: './src/index.jsx',
@@ -28,9 +33,6 @@ module.exports = {
       { test: /\.(jpe?g|png|gif)$/, loader: 'url' },
     ],
   },
-  cache: true,
-  debug: true,
-  devtool: 'inline-source-map',
   stats: {
     colors: true,
     reasons: false,
@@ -58,3 +60,5 @@ module.exports = {
     configFile: './.eslintrc',
   },
 };
+
+module.exports = merge(common, config);
