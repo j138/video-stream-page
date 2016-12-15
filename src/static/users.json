@@ -113,6 +113,16 @@
       }
     ]
   },
+  "thomas": {
+    "name": "thomas",
+    "image": "",
+    "source": [
+      {
+        "src": "rtmp://miyahira.me/thomas/kido",
+        "type": "rtmp/mp4"
+      }
+    ]
+  },
   "yama56": {
     "name": "yama56",
     "image": "",
