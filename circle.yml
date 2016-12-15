@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 7.1.0
+    version: 7.2.0
   timezone:
     Asia/Tokyo
   post:
@@ -19,4 +19,4 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: miyahira-video-stream
+      appname: video-stream-page
