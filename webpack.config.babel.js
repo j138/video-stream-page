@@ -39,7 +39,7 @@ const common = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: { glob: './src/static/*', dot: true }, to: '[name].[ext]' },
+      { from: { glob: './src/static/**', dot: true }, to: '[name].[ext]' },
     ]),
     new ManifestPlugin(),
     new ChunkManifestPlugin({
