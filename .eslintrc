@@ -11,8 +11,11 @@
   ],
   "rules": {
     "import/no-dynamic-require": 0,
-    "import/no-extraneous-dependencies": 0,
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": false,
+      "optionalDependencies": false
+    }]
   },
   "ecmaFeatures": {
     "arrowFunctions": true,
