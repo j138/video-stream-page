@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
-import SocialMood from 'material-ui/svg-icons/social/mood';
-
+import IconBeer from '../src/static/iconmonstr-beer.svg';
+import IconGithub from '../src/static/iconmonstr-github.svg';
 import * as styles from './styles';
 
 @Radium
@@ -40,9 +40,15 @@ class Header extends React.Component {
           title={`${this.props.user.name}@Miyahira Livestream`}
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
           iconElementRight={
-            <IconButton href="https://github.com/j138/video-stream-page" tooltipPosition="bottom-right">
-              <SocialMood />
-            </IconButton>
+            <div>
+              <IconButton target="blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N6MDNCK2V2D3C" tooltip="beer Me!" tooltipPosition="bottom-left">
+                <img src={IconBeer} role="presentation" />
+              </IconButton>
+
+              <IconButton target="blank" href="https://github.com/j138/video-stream-page" tooltip="src code" tooltipPosition="bottom-left">
+                <img src={IconGithub} role="presentation" />
+              </IconButton>
+            </div>
           }
         />
 

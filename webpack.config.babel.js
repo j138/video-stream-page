@@ -29,8 +29,8 @@ const common = {
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'babel'] },
       { test: /\.css$/, loaders: ['style', 'css'] },
       { test: /\.json/, loader: 'json' },
-      { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
-      { test: /\.(jpe?g|png|gif)$/, loader: 'url' },
+      { test: /\.(eot|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
+      { test: /\.(jpe?g|png|gif|svg)$/, loader: 'url' },
     ],
   },
   stats: {
