@@ -5,7 +5,7 @@ import videojs from 'video.js/es5/video';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 import Loading from '../components/Loading';
-import favicon from '../src/favicon.png';
+import favicon from '../src/image/favicon.png';
 
 const apiUrl = 'users.json';
 
