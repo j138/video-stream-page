@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
-import IconBeer from '../src/static/iconmonstr-beer.svg';
-import IconGithub from '../src/static/iconmonstr-github.svg';
+import IconBeer from '../src/iconmonstr-beer.svg';
+import IconGithub from '../src/iconmonstr-github.svg';
 import * as styles from './styles';
 
 @Radium
