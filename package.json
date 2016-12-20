@@ -31,6 +31,9 @@
   "bugs": {
     "url": ""
   },
+  "greenkeeper": {
+    "ignore": ["eslint-plugin-jsx-a11y"]
+  },
   "homepage": "https://stream.jey3dayo.net/",
   "devDependencies": {
     "babel-core": "^6.21.0",
