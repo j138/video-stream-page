@@ -11,12 +11,12 @@ const config = process.env.NODE_ENV === 'production' ?
 const common = {
   context: __dirname,
   entry: {
-    entry: './src/index.jsx',
+    bundle: './src/index.jsx',
   },
   output: {
     path: `${__dirname}/public`,
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   devServer: {
     headers: { 'Access-Control-Allow-Origin': '*' },
