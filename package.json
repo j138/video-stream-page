@@ -61,7 +61,7 @@
     "firebase-tools": "3.2.1",
     "html-webpack-plugin": "2.25.0",
     "npm-check-updates": "^2.8.8",
-    "npm-run-all": "3.1.2",
+    "npm-run-all": "4.0.0",
     "style-loader": "^0.13.1",
     "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "0.5.7",
