@@ -21,4 +21,4 @@ miyahira配信用サイト
 
 
 ## 公開サイト
-[Miyahira Livestream](https://video-stream-page.firebaseapp.com/ "Miyahira Livestream")
+[Miyahira Livestream](https://stream.jey3dayo.net/ "Miyahira Livestream")
