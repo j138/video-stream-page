@@ -42,11 +42,11 @@ class Header extends React.Component {
           iconElementRight={
             <div>
               <IconButton target="blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N6MDNCK2V2D3C" tooltip="beer Me!" tooltipPosition="bottom-left">
-                <img src={IconBeer} role="presentation" />
+                <img src={IconBeer} alt="beer me" />
               </IconButton>
 
               <IconButton target="blank" href="https://github.com/j138/video-stream-page" tooltip="src code" tooltipPosition="bottom-left">
-                <img src={IconGithub} role="presentation" />
+                <img src={IconGithub} alt="code is here" />
               </IconButton>
             </div>
           }

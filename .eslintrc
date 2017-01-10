@@ -10,6 +10,7 @@
     "react"
   ],
   "rules": {
+    "react/require-default-props": 0,
     "import/no-dynamic-require": 0,
     "linebreak-style": 0,
     "import/no-extraneous-dependencies": ["error", {
