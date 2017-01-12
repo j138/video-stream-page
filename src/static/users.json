@@ -1,7 +1,7 @@
 {
   "jey": {
     "name": "Jey",
-    "image": "../src/image/poster-jey.jpg",
+    "image": "https://i.imgur.com/NX1FPi5.jpgg",
     "source": [
       {
         "src": "rtmp://miyahira.me/jey3/kido",
@@ -15,7 +15,7 @@
   },
   "abeyan": {
     "name": "abeyan",
-    "image": "../src/image/poster-abeyan.jpg",
+    "image": "https://lolstatic-a.akamaihd.net/frontpage/apps/prod/elementalist-lux-2016/ja_JP/728095d33c01137a265f7c8f556195908e25fb16/assets/images/infos/art.jpg",
     "source": [
       {
         "src": "rtmp://miyahira.me/abeyan/kido",

@@ -30,7 +30,7 @@ const common = {
       { test: /\.css$/, loaders: ['style', 'css'] },
       { test: /\.json/, loader: 'json' },
       { test: /\.(eot|ttf|woff|woff2)$/, loader: 'file?name=material-design-icons/iconfont/[name].[ext]' },
-      { test: /\.(jpe?g|png|gif|svg)$/, loader: 'url' },
+      { test: /\.(jpe?g|png|gif|svg)$/, loader: 'url?limit=10000' },
     ],
   },
   stats: {
