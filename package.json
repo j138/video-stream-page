@@ -9,7 +9,7 @@
     "eslint:fix": "eslint --fix .",
     "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
     "build-debug": "webpack --display-error-details --progress --colors",
-    "build": "webpack --progress --colors",
+    "build": "NODE_ENV=production webpack --progress --colors",
     "deploy:firebase": "firebase deploy",
     "deploy": "npm-run-all -s build deploy:firebase",
     "ncu": "ncu -a"
