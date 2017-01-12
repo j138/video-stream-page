@@ -78,7 +78,7 @@ class App extends React.Component {
 App.propTypes = {
   params: React.PropTypes.shape({
     userName: React.PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 export default App;

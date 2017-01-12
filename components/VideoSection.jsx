@@ -42,7 +42,7 @@ VideoSection.propTypes = {
   user: React.PropTypes.shape({
     name: React.PropTypes.string,
     image: React.PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 export default VideoSection;

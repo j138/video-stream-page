@@ -83,12 +83,12 @@ class Header extends React.Component {
 Header.propTypes = {
   user: React.PropTypes.shape({
     name: React.PropTypes.string,
-  }),
+  }).isRequired,
   users: React.PropTypes.shape({
     user: React.PropTypes.shape({
       name: React.PropTypes.string,
     }),
-  }),
+  }).isRequired,
 };
 
 export default Header;

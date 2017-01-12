@@ -18,7 +18,7 @@ const Template = props => (
 );
 
 Template.propTypes = {
-  children: React.PropTypes.shape(),
+  children: React.PropTypes.shape.isRequired,
 };
 
 export default Template;
