@@ -15,8 +15,3 @@ dependencies:
 test:
   override:
     - npm run eslint -- --format=junit -o $CIRCLE_TEST_REPORTS/eslint/eslint.xml .
-deployment:
-  production:
-    branch: master
-    commands:
-      - ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN --non-interactive
