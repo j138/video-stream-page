@@ -9,6 +9,7 @@ dependencies:
   cache_directories:
     - ~/.cache/yarn
   pre:
+    - mkdir -p ~/.cache/yarn
     - yarn --version
   override:
     - yarn install
