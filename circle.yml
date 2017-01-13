@@ -3,14 +3,14 @@ machine:
     version: 7.2.0
   timezone:
     Asia/Tokyo
-  post:
-    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  environment:
+    PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
 dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
   cache_directories:
     - ~/.yarn
     - ~/.cache/yarn
-  pre:
-    - yarn --version
   override:
     - yarn install
 test:
