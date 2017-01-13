@@ -7,7 +7,10 @@ machine:
     PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
 dependencies:
   pre:
-    - curl -o- -L https://yarnpkg.com/install.sh | bash
+    - |
+      if [[ ! -e ~/.yarn/bin/yarn]]; then
+        curl -o- -L https://yarnpkg.com/install.sh | bash
+      fi
   cache_directories:
     - ~/.yarn
     - ~/.cache/yarn
