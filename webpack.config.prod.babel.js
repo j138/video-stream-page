@@ -1,7 +1,6 @@
 import webpack from 'webpack';
 
 module.exports = {
-  debug: false,
   devtool: false,
   output: {
     path: `${__dirname}/public`,
@@ -16,6 +15,9 @@ module.exports = {
         warnings: false,
       },
       comments: false,
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
     }),
     new webpack.optimize.AggressiveMergingPlugin(),
   ],

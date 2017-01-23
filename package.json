@@ -65,7 +65,7 @@
     "style-loader": "^0.13.1",
     "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "0.5.7",
-    "webpack": "1.14.0",
+    "webpack": "2.2.0",
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.15.0",
     "webpack-manifest-plugin": "1.1.0",
