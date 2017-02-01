@@ -93,6 +93,6 @@
     "react-tap-event-plugin": "^2.0.1",
     "superagent": "^3.4.1",
     "video.js": "^5.16.0",
-    "videojs-contrib-hls": "^5.0.0"
+    "videojs-contrib-hls": "^5.1.0"
   }
 }
