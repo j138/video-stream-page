@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
+import IconDiscord from '../src/image/discord-logo.svg';
 import IconBeer from '../src/image/iconmonstr-beer.svg';
 import IconGithub from '../src/image/iconmonstr-github.svg';
 import * as styles from './styles';
@@ -41,6 +42,10 @@ class Header extends React.Component {
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
           iconElementRight={
             <div>
+              <IconButton target="blank" href="https://discord.gg/UgnXDAc" tooltip="miyahira discord" tooltipPosition="bottom-left">
+                <img src={IconDiscord} alt="miyahira discord" width="28px" />
+              </IconButton>
+
               <IconButton target="blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N6MDNCK2V2D3C" tooltip="beer Me!" tooltipPosition="bottom-left">
                 <img src={IconBeer} alt="beer me" />
               </IconButton>
