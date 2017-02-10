@@ -6702,9 +6702,9 @@ video.js@^5.17.0:
     videojs-vtt.js "0.12.1"
     xhr "2.2.2"
 
-videojs-contrib-hls@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/videojs-contrib-hls/-/videojs-contrib-hls-5.2.0.tgz#3cb4ab474b0b5a691752977a755fadd8b843662d"
+videojs-contrib-hls@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/videojs-contrib-hls/-/videojs-contrib-hls-5.2.1.tgz#42fcd7e1bc787480a5ff92d1b1a505f493941811"
   dependencies:
     aes-decrypter "1.0.3"
     global "^4.3.0"
