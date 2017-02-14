@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/j138/video-stream-page/tree/master.svg?style=svg)](https://circleci.com/gh/j138/video-stream-page/tree/master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/j138/video-stream-page.svg)](https://greenkeeper.io/)
 
 ## video-stream-page
 
