@@ -68,7 +68,7 @@
     "webpack-dev-server": "^2.3.0",
     "webpack-hot-middleware": "^2.17.0",
     "webpack-manifest-plugin": "1.1.0",
-    "webpack-merge": "2.6.1"
+    "webpack-merge": "3.0.0"
   },
   "dependencies": {
     "browserify": "^14.1.0",
