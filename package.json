@@ -57,7 +57,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
     "file-loader": "^0.10.0",
-    "firebase-tools": "3.3.0",
+    "firebase-tools": "3.4.0",
     "html-webpack-plugin": "2.28.0",
     "npm-check-updates": "^2.10.3",
     "npm-run-all": "4.0.1",
