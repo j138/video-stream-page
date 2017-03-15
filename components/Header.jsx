@@ -35,10 +35,12 @@ class Header extends React.Component {
       },
     ];
 
+    const { users, user } = this.props;
+
     return (
       <header>
         <AppBar
-          title={`${this.props.user.name}@Miyahira Livestream`}
+          title={`${user.name}@Miyahira Livestream`}
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
           iconElementRight={
             <div>
@@ -64,11 +66,11 @@ class Header extends React.Component {
         >
           <AppBar showMenuIconButton={false} title="Select Livestream" />
 
-          {Object.keys(this.props.users).map(k => (
-            <Link key={k} to={k} style={styles.drawerItem}>
+          {users.map(u => (
+            <Link key={u.name} to={u.name} style={styles.drawerItem}>
               <MenuItem
                 onTouchTap={() => this.selectUser()}
-                primaryText={this.props.users[k].name}
+                primaryText={u.name}
               />
             </Link>))}
 

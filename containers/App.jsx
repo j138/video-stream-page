@@ -15,12 +15,13 @@ class App extends React.Component {
 
     this.state = {
       user: { name: '', image: '', source: [{ src: '', type: '' }] },
-      users: {},
+      users: [],
     };
   }
 
   componentDidMount() {
     const params = this.props.match.params;
+
     request.get(apiUrl)
     .accept('json')
     .end((err, res) => {
@@ -29,22 +30,24 @@ class App extends React.Component {
       }
 
       const users = res.body;
-      const currentUserKey = (users[params.userName])
-      ? params.userName
-      : Object.keys(users).shift();
+      const user = users.find(u => u.name === params.userName) || users[0];
 
-      this.setState({ users, user: users[currentUserKey] });
+      this.setState({ users, user });
     });
   }
 
   componentWillReceiveProps(newProps) {
+    const { users } = this.state;
     const params = newProps.match.params;
-    this.setState({ user: this.state.users[params.userName] });
+
+    this.setState({ user: users.find(u => u.name === params.userName) });
   }
 
   shouldComponentUpdate(newProps) {
+    const { user } = this.state;
     const params = newProps.match.params;
-    if (params.userName !== this.state.user.name) return true;
+
+    if (params.userName !== user.name) return true;
     return false;
   }
 
@@ -54,9 +57,11 @@ class App extends React.Component {
   }
 
   setup() {
+    const { user } = this.state;
+
     const v = videojs(this.videoSection.videoPlayer);
-    v.poster(this.state.user.image);
-    v.src(this.state.user.source);
+    v.poster(user.image);
+    v.src(user.source);
     v.load();
     v.play();
   }
@@ -71,8 +76,7 @@ class App extends React.Component {
         <Helmet title={user.name} link={[{ rel: 'icon', type: 'image/png', href: favicon }]} />
         <div>
           <Header user={user} users={users} />
-          <VideoSection ref={(c) => { this.videoSection = c; }} user={user} />
-        </div>
+          <VideoSection ref={(c) => { this.videoSection = c; }} user={user} /> </div>
       </div>
     );
   }

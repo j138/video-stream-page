@@ -1,5 +1,5 @@
-{
-  "jey": {
+[
+  {
     "name": "Jey",
     "image": "https://i.imgur.com/NX1FPi5.jpg",
     "source": [
@@ -13,7 +13,7 @@
       }
     ]
   },
-  "abeyan": {
+  {
     "name": "abeyan",
     "image": "https://lolstatic-a.akamaihd.net/frontpage/apps/prod/elementalist-lux-2016/ja_JP/728095d33c01137a265f7c8f556195908e25fb16/assets/images/infos/art.jpg",
     "source": [
@@ -23,7 +23,7 @@
       }
     ]
   },
-  "tosiko": {
+  {
     "name": "tosiko",
     "image": "",
     "source": [
@@ -37,7 +37,7 @@
       }
     ]
   },
-  "nomura": {
+  {
     "name": "Nomuran",
     "image": "",
     "source": [
@@ -47,7 +47,7 @@
       }
     ]
   },
-  "taka": {
+  {
     "name": "taka",
     "image": "",
     "source": [
@@ -61,7 +61,7 @@
       }
     ]
   },
-  "eamati": {
+  {
     "name": "itamahe-",
     "image": "",
     "source": [
@@ -75,7 +75,7 @@
       }
     ]
   },
-  "sakuyan": {
+  {
     "name": "sakuyan",
     "image": "",
     "source": [
@@ -89,7 +89,7 @@
       }
     ]
   },
-  "boooooyamaaaaaaaan": {
+  {
     "name": "booyamaaaaaaaan",
     "image": "",
     "source": [
@@ -103,7 +103,7 @@
       }
     ]
   },
-  "fine": {
+  {
     "name": "fine",
     "image": "",
     "source": [
@@ -113,7 +113,7 @@
       }
     ]
   },
-  "thomas": {
+  {
     "name": "thomas",
     "image": "",
     "source": [
@@ -123,7 +123,7 @@
       }
     ]
   },
-  "yama56": {
+  {
     "name": "yama56",
     "image": "",
     "source": [
@@ -133,7 +133,7 @@
       }
     ]
   },
-  "test": {
+  {
     "name": "test",
     "image": "http://www.html5videoplayer.net/poster/toystory.jpg",
     "source": [
@@ -143,4 +143,4 @@
       }
     ]
   }
-}
+]
