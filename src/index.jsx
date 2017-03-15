@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
-import MyRawTheme from '../components/materialUiRawThemeFile';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Template from '../containers/Template';
 import App from '../containers/App';
 import './main.css';
@@ -14,18 +12,24 @@ window.React = React;
 ReactGA.initialize('UA-88356342-1');
 
 const logPageView = () => {
+  window.console.log(window.location);
   ReactGA.set({ page: window.location.pathname });
   ReactGA.pageview(window.location.pathname);
+  return null;
 };
 
 injectTapEventPlugin();
 ReactDOM.render((
-  <MuiThemeProvider muiTheme={getMuiTheme(MyRawTheme)}>
-    <Router history={browserHistory} onUpdate={logPageView}>
-      <Route path="/" component={Template}>
-        <IndexRoute component={App} />
-        <Route path="/:userName" component={App} />
-      </Route>
+  <Template>
+    <Router>
+      <div>
+        <Route path="/" component={logPageView} />
+        <Switch>
+          <Route exact path="/" component={App} />
+          <Route path="/:userName" component={App} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </div>
     </Router>
-  </MuiThemeProvider>
+  </Template>
 ), document.getElementById('root'));

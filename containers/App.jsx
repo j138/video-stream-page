@@ -20,6 +20,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    const params = this.props.match.params;
     request.get(apiUrl)
     .accept('json')
     .end((err, res) => {
@@ -28,8 +29,8 @@ class App extends React.Component {
       }
 
       const users = res.body;
-      const currentUserKey = (users[this.props.params.userName])
-      ? this.props.params.userName
+      const currentUserKey = (users[params.userName])
+      ? params.userName
       : Object.keys(users).shift();
 
       this.setState({ users, user: users[currentUserKey] });
@@ -37,11 +38,13 @@ class App extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState({ user: this.state.users[newProps.params.userName] });
+    const params = newProps.match.params;
+    this.setState({ user: this.state.users[params.userName] });
   }
 
   shouldComponentUpdate(newProps) {
-    if (newProps.params.userName !== this.state.user.name) return true;
+    const params = newProps.match.params;
+    if (params.userName !== this.state.user.name) return true;
     return false;
   }
 
@@ -76,8 +79,10 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  params: React.PropTypes.shape({
-    userName: React.PropTypes.string,
+  match: React.PropTypes.shape({
+    params: React.PropTypes.shape({
+      userName: React.PropTypes.string,
+    }).isRequired,
   }).isRequired,
 };
 

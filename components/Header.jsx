@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
 import IconDiscord from '../src/image/discord-logo.svg';
