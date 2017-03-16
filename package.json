@@ -74,7 +74,7 @@
   "dependencies": {
     "browserify": "^14.1.0",
     "classnames": "^2.2.5",
-    "es6-set": "^0.1.4",
+    "es6-set": "0.1.4",
     "fbjs": "^0.8.9",
     "history": "^4.6.0",
     "material-ui": "^0.17.1",
