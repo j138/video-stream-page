@@ -7,8 +7,7 @@ import IconBeer from '../src/image/iconmonstr-beer.svg';
 import IconGithub from '../src/image/iconmonstr-github.svg';
 import * as styles from './styles';
 
-@Radium
-class Header extends React.Component {
+@Radium class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
@@ -44,15 +43,30 @@ class Header extends React.Component {
           onLeftIconButtonTouchTap={() => this.setState({ open: true })}
           iconElementRight={
             <div>
-              <IconButton target="blank" href="https://discord.gg/UgnXDAc" tooltip="miyahira discord" tooltipPosition="bottom-left">
+              <IconButton
+                target="blank"
+                href="https://discord.gg/UgnXDAc"
+                tooltip="miyahira discord"
+                tooltipPosition="bottom-left"
+              >
                 <img src={IconDiscord} alt="miyahira discord" width="28px" />
               </IconButton>
 
-              <IconButton target="blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N6MDNCK2V2D3C" tooltip="beer Me!" tooltipPosition="bottom-left">
+              <IconButton
+                target="blank"
+                href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=N6MDNCK2V2D3C"
+                tooltip="beer Me!"
+                tooltipPosition="bottom-left"
+              >
                 <img src={IconBeer} alt="beer me" />
               </IconButton>
 
-              <IconButton target="blank" href="https://github.com/j138/video-stream-page" tooltip="src code" tooltipPosition="bottom-left">
+              <IconButton
+                target="blank"
+                href="https://github.com/j138/video-stream-page"
+                tooltip="src code"
+                tooltipPosition="bottom-left"
+              >
                 <img src={IconGithub} alt="code is here" />
               </IconButton>
             </div>
@@ -68,18 +82,17 @@ class Header extends React.Component {
 
           {users.map(u => (
             <Link key={u.name} to={u.name} style={styles.drawerItem}>
-              <MenuItem
-                onTouchTap={() => this.selectUser()}
-                primaryText={u.name}
-              />
-            </Link>))}
+              <MenuItem onTouchTap={() => this.selectUser()} primaryText={u.name} />
+            </Link>
+          ))}
 
           <Divider />
 
           {links.map(v => (
             <a key={v.href} href={v.href} style={{ textDecoration: 'none' }}>
               <MenuItem primaryText={v.text} />
-            </a>))}
+            </a>
+          ))}
 
         </Drawer>
       </header>

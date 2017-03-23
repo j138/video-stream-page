@@ -4,8 +4,7 @@ import * as styles from './styles';
 
 const classNames = require('classnames');
 
-@Radium
-class VideoSection extends React.Component {
+@Radium class VideoSection extends React.Component {
   render() {
     const props = {
       id: 'main-video',
@@ -31,7 +30,9 @@ class VideoSection extends React.Component {
       <video
         style={styles.wideScreen}
         {...props}
-        ref={(c) => { this.videoPlayer = c; }}
+        ref={(c) => {
+          this.videoPlayer = c;
+        }}
         data-setup={datasetup}
       />
     );

@@ -22,9 +22,7 @@ class App extends React.Component {
   componentDidMount() {
     const params = this.props.match.params;
 
-    request.get(apiUrl)
-    .accept('json')
-    .end((err, res) => {
+    request.get(apiUrl).accept('json').end((err, res) => {
       if (err) {
         throw err;
       }
@@ -76,7 +74,13 @@ class App extends React.Component {
         <Helmet title={user.name} link={[{ rel: 'icon', type: 'image/png', href: favicon }]} />
         <div>
           <Header user={user} users={users} />
-          <VideoSection ref={(c) => { this.videoSection = c; }} user={user} /> </div>
+          <VideoSection
+            ref={(c) => {
+              this.videoSection = c;
+            }}
+            user={user}
+          />{' '}
+        </div>
       </div>
     );
   }

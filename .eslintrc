@@ -11,6 +11,8 @@
   ],
   "rules": {
     "linebreak-style": ["error", "unix"],
+    "no-confusing-arrow": 0,
+    "no-mixed-operators": 0,
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": true,
       "optionalDependencies": true

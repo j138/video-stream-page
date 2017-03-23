@@ -8,10 +8,7 @@ const title = 'Miyahira Livestream';
 const Template = props => (
   <MuiThemeProvider muiTheme={getMuiTheme(MyRawTheme)}>
     <div>
-      <Helmet
-        defaultTitle={title}
-        titleTemplate={`%s@${title}`}
-      />
+      <Helmet defaultTitle={title} titleTemplate={`%s@${title}`} />
       {props.children}
     </div>
   </MuiThemeProvider>
