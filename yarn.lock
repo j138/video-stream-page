@@ -382,15 +382,14 @@ babel-core@^6.24.0:
     slash "^1.0.0"
     source-map "^0.5.0"
 
-babel-eslint@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-7.2.0.tgz#8941514b9dead06f0df71b29d5d5b193a92ee0ae"
+babel-eslint@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-7.2.1.tgz#079422eb73ba811e3ca0865ce87af29327f8c52f"
   dependencies:
     babel-code-frame "^6.22.0"
     babel-traverse "^6.23.1"
     babel-types "^6.23.0"
     babylon "^6.16.1"
-    lodash "^4.17.4"
 
 babel-generator@^6.24.0:
   version "6.24.0"
@@ -978,11 +977,11 @@ babel-types@^6.16.0, babel-types@^6.19.0, babel-types@^6.22.0, babel-types@^6.23
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
 
-babylon@6.15.0, babylon@^6.11.0:
+babylon@6.15.0, babylon@^6.11.0, babylon@^6.15.0:
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.15.0.tgz#ba65cfa1a80e1759b0e89fb562e27dccae70348e"
 
-babylon@^6.15.0, babylon@^6.16.1:
+babylon@^6.16.1:
   version "6.16.1"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.16.1.tgz#30c5a22f481978a9e7f8cdfdf496b11d94b404d3"
 
@@ -1535,11 +1534,11 @@ colormin@^1.0.5:
     css-color-names "0.0.4"
     has "^1.0.1"
 
-colors@1.0.3, colors@1.0.x:
+colors@1.0.3, colors@1.0.x, colors@>=0.6.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
 
-colors@>=0.6.2, colors@~1.1.2:
+colors@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
 
@@ -5402,9 +5401,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier-eslint-cli@3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/prettier-eslint-cli/-/prettier-eslint-cli-3.1.2.tgz#697d21f3ed8ffb41dee499961eb88f1e04f08e36"
+prettier-eslint-cli@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/prettier-eslint-cli/-/prettier-eslint-cli-3.1.3.tgz#7651bfabffd1392643c2deb3db9e185914387102"
   dependencies:
     arrify "^1.0.1"
     babel-runtime "^6.23.0"
@@ -5668,9 +5667,9 @@ react-ga@2.1.2:
   dependencies:
     object-assign "^4.0.1"
 
-react-helmet@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.0.0.tgz#167edc7dadf936cd627fa10ebe0f985e3f18f225"
+react-helmet@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.0.1.tgz#ffaf4553bb47c68a65edc53782d7fc6706796343"
   dependencies:
     deep-equal "^1.0.1"
     object-assign "^4.1.1"
@@ -6506,9 +6505,9 @@ source-list-map@^0.1.7, source-list-map@~0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
 
-source-list-map@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-1.0.1.tgz#cc1fc17122ae0a51978024c2cc0f8c35659026b8"
+source-list-map@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-1.1.1.tgz#1a33ac210ca144d1e561f906ebccab5669ff4cb4"
 
 source-map-support@^0.4.2:
   version "0.4.9"
@@ -7394,16 +7393,16 @@ webpack-merge@4.1.0:
   dependencies:
     lodash "^4.17.4"
 
-webpack-sources@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-0.2.0.tgz#fea93ba840f16cdd3f246f0ee95f88a9492c69fb"
+webpack-sources@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-0.2.3.tgz#17c62bfaf13c707f9d02c479e0dcdde8380697fb"
   dependencies:
-    source-list-map "^1.0.1"
+    source-list-map "^1.1.1"
     source-map "~0.5.3"
 
-webpack@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.3.1.tgz#55bce8baffe7c1f9dc3029adc048643b448318a8"
+webpack@2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.3.2.tgz#7d521e6f0777a3a58985c69425263fdfe977b458"
   dependencies:
     acorn "^4.0.4"
     acorn-dynamic-import "^2.0.0"
@@ -7423,7 +7422,7 @@ webpack@2.3.1:
     tapable "~0.2.5"
     uglify-js "^2.8.5"
     watchpack "^1.3.1"
-    webpack-sources "^0.2.0"
+    webpack-sources "^0.2.3"
     yargs "^6.0.0"
 
 websocket-driver@>=0.5.1:

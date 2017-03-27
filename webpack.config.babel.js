@@ -4,9 +4,9 @@ import ChunkManifestPlugin from 'chunk-manifest-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import merge from 'webpack-merge';
 
-const config = process.env.NODE_ENV === 'production' ?
-  require('./webpack.config.prod.babel.js') :
-  require('./webpack.config.dev.babel.js');
+const config = process.env.NODE_ENV === 'production'
+  ? require('./webpack.config.prod.babel.js')
+  : require('./webpack.config.dev.babel.js');
 
 const common = {
   context: __dirname,
@@ -24,9 +24,16 @@ const common = {
   module: {
     rules: [
       { test: /\.jsx?$/, enforce: 'pre', exclude: /node_modules/, loader: 'eslint-loader' },
-      { test: /\.jsx?$/, exclude: /node_modules/, use: ['react-hot-loader/webpack', 'babel-loader'] },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: ['react-hot-loader/webpack', 'babel-loader'],
+      },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.(eot|ttf|woff|woff2)$/, loader: 'file-loader?name=material-design-icons/iconfont/[name].[ext]' },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=material-design-icons/iconfont/[name].[ext]',
+      },
       { test: /\.(jpe?g|png|gif|svg)$/, loader: 'url-loader?limit=10000' },
     ],
   },
@@ -35,9 +42,7 @@ const common = {
     reasons: false,
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: { glob: './src/static/**', dot: true }, to: '[name].[ext]' },
-    ]),
+    new CopyWebpackPlugin([{ from: { glob: './src/static/**', dot: true }, to: '[name].[ext]' }]),
     new ManifestPlugin(),
     new ChunkManifestPlugin({
       filename: 'chunk-manifest.json',
