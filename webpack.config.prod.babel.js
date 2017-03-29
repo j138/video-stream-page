@@ -5,8 +5,8 @@ module.exports = {
   output: {
     path: `${__dirname}/public`,
     publicPath: '/',
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[hash].js',
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
