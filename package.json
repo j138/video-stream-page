@@ -10,8 +10,8 @@
     "prettier": "find ./src ./components ./containers -name '*.js' -o -name '*.jsx' | xargs prettier-eslint --write",
     "nsp": "nsp check",
     "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
-    "build:debug": "webpack --display-error-details --progress --colors",
-    "build": "NODE_ENV=production webpack --progress --colors",
+    "build:debug": "webpack -p --display-error-details --progress --colors",
+    "build": "NODE_ENV=production webpack -p --progress --colors",
     "deploy:firebase": "firebase deploy",
     "deploy": "npm-run-all -s build deploy:firebase",
     "ncu": "ncu -a"
