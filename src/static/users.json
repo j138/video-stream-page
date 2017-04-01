@@ -76,6 +76,20 @@
     ]
   },
   {
+    "name": "segirl",
+    "image": "http://i.imgur.com/gcVaAy3.jpg",
+    "source": [
+      {
+        "src": "rtmp://miyahira.me/segirl/kido",
+        "type": "rtmp/mp4"
+      },
+      {
+        "src": "rtmp://miyahira.me:8081/segirlhls/kido.m3u8",
+        "type": "application/x-mpegURL"
+      }
+    ]
+  },
+  {
     "name": "sakuyan",
     "image": "",
     "source": [
