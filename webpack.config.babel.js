@@ -52,6 +52,7 @@ const common = {
       hash: true,
       filename: 'index.html',
       template: './src/index.template.ejs',
+      favicon: './src/image/favicon.png',
       inject: 'body',
     }),
   ],

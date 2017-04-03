@@ -5,7 +5,6 @@ import videojs from 'video.js/es5/video';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 import Loading from '../components/Loading';
-import favicon from '../src/image/favicon.png';
 
 const apiUrl = 'users.json';
 
@@ -71,7 +70,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Helmet title={user.name} link={[{ rel: 'icon', type: 'image/png', href: favicon }]} />
+        <Helmet title={user.name} />
         <div>
           <Header user={user} users={users} />
           <VideoSection
