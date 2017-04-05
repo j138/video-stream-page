@@ -76,7 +76,7 @@
     "webpack-merge": "4.1.0"
   },
   "dependencies": {
-    "browserify": "^14.1.0",
+    "browserify": "14.2.0",
     "classnames": "^2.2.5",
     "history": "^4.6.1",
     "material-ui": "^0.17.1",
