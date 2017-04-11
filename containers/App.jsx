@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import request from 'superagent';
 import videojs from 'video.js/es5/video';
@@ -86,9 +87,9 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  match: React.PropTypes.shape({
-    params: React.PropTypes.shape({
-      userName: React.PropTypes.string,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      userName: PropTypes.string,
     }).isRequired,
   }).isRequired,
 };

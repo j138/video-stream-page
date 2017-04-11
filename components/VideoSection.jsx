@@ -1,14 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 import Radium from 'radium';
 import * as styles from './styles';
-
-const classNames = require('classnames');
 
 @Radium class VideoSection extends React.Component {
   render() {
     const props = {
       id: 'main-video',
-      className: classNames('video-js', 'vjs-default-skin'),
+      className: cx('video-js', 'vjs-default-skin'),
       poster: this.props.user.image,
       controls: true,
       autoPlay: false,
@@ -40,9 +40,9 @@ const classNames = require('classnames');
 }
 
 VideoSection.propTypes = {
-  user: React.PropTypes.shape({
-    name: React.PropTypes.string,
-    image: React.PropTypes.string,
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired,
 };
 

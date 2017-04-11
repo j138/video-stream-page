@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
@@ -101,12 +102,12 @@ import * as styles from './styles';
 }
 
 Header.propTypes = {
-  user: React.PropTypes.shape({
-    name: React.PropTypes.string,
+  user: PropTypes.shape({
+    name: PropTypes.string,
   }).isRequired,
-  users: React.PropTypes.shape({
-    user: React.PropTypes.shape({
-      name: React.PropTypes.string,
+  users: PropTypes.shape({
+    user: PropTypes.shape({
+      name: PropTypes.string,
     }),
   }).isRequired,
 };

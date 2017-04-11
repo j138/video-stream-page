@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles';
 import MyRawTheme from '../components/materialUiRawThemeFile';
@@ -15,7 +16,7 @@ const Template = props => (
 );
 
 Template.propTypes = {
-  children: React.PropTypes.shape.isRequired,
+  children: PropTypes.shape.isRequired,
 };
 
 export default Template;
