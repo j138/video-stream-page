@@ -83,7 +83,10 @@ import * as styles from './styles';
 
           {users.map(u => (
             <Link key={u.name} to={u.name} style={styles.drawerItem}>
-              <MenuItem onTouchTap={() => this.selectUser()} primaryText={u.name} />
+              <MenuItem
+                onTouchTap={() => this.selectUser()}
+                primaryText={u.name}
+              />
             </Link>
           ))}
 

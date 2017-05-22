@@ -34,7 +34,9 @@ import * as styles from './styles';
           this.videoPlayer = c;
         }}
         data-setup={datasetup}
-      />
+      >
+        <track kind="captions" />
+      </video>
     );
   }
 }
