@@ -27,7 +27,7 @@ const common = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['react-hot-loader/webpack', 'babel-loader'],
+        use: ['react-hot-loader', 'babel-loader'],
       },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       {
