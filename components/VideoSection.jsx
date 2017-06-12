@@ -4,7 +4,8 @@ import cx from 'classnames';
 import Radium from 'radium';
 import * as styles from './styles';
 
-@Radium class VideoSection extends React.Component {
+@Radium
+class VideoSection extends React.Component {
   render() {
     const props = {
       id: 'main-video',

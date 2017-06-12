@@ -8,7 +8,8 @@ import IconBeer from '../src/image/iconmonstr-beer.svg';
 import IconGithub from '../src/image/iconmonstr-github.svg';
 import * as styles from './styles';
 
-@Radium class Header extends React.Component {
+@Radium
+class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
@@ -81,22 +82,19 @@ import * as styles from './styles';
         >
           <AppBar showMenuIconButton={false} title="Select Livestream" />
 
-          {users.map(u => (
-            <Link key={u.name} to={u.name} style={styles.drawerItem}>
-              <MenuItem
-                onTouchTap={() => this.selectUser()}
-                primaryText={u.name}
-              />
-            </Link>
-          ))}
+          {users.map(u =>
+            (<Link key={u.name} to={u.name} style={styles.drawerItem}>
+              <MenuItem onTouchTap={() => this.selectUser()} primaryText={u.name} />
+            </Link>),
+          )}
 
           <Divider />
 
-          {links.map(v => (
-            <a key={v.href} href={v.href} style={{ textDecoration: 'none' }}>
+          {links.map(v =>
+            (<a key={v.href} href={v.href} style={{ textDecoration: 'none' }}>
               <MenuItem primaryText={v.text} />
-            </a>
-          ))}
+            </a>),
+          )}
 
         </Drawer>
       </header>

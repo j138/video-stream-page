@@ -7,10 +7,9 @@ const customStyle = {
   paddingTop: 100,
 };
 
-const Loading = () => (
-  <div style={[customStyle, styles.wideScreen]}>
+const Loading = () =>
+  (<div style={[customStyle, styles.wideScreen]}>
     <CircularProgress size={320} thickness={12} />
-  </div>
-);
+  </div>);
 
 export default radium(Loading);

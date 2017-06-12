@@ -6,14 +6,13 @@ import MyRawTheme from '../components/materialUiRawThemeFile';
 
 const title = 'Miyahira Livestream';
 
-const Template = props => (
-  <MuiThemeProvider muiTheme={getMuiTheme(MyRawTheme)}>
+const Template = props =>
+  (<MuiThemeProvider muiTheme={getMuiTheme(MyRawTheme)}>
     <div>
       <Helmet defaultTitle={title} titleTemplate={`%s@${title}`} />
       {props.children}
     </div>
-  </MuiThemeProvider>
-);
+  </MuiThemeProvider>);
 
 Template.propTypes = {
   children: PropTypes.shape.isRequired,
