@@ -19,7 +19,6 @@ class VideoSection extends React.Component {
     const datasetup = `
         {
           "nativeControlsForTouch": "true",
-          "techOrder": ["flash", "html5", "other supported tech"],
           "controlBar": {
             "timeDivider": false,
             "durationDisplay": true,
