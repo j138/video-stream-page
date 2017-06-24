@@ -20,6 +20,10 @@
       {
         "src": "rtmp://miyahira.me/abeyan/kido",
         "type": "rtmp/mp4"
+      },
+      {
+        "src": "http://miyahira.me:8081/abeyanhls/kido.m3u8",
+        "type": "application/x-mpegURL"
       }
     ]
   },
@@ -44,6 +48,10 @@
       {
         "src": "rtmp://miyahira.me/nomura/kido",
         "type": "rtmp/mp4"
+      },
+      {
+        "src": "http://miyahira.me:8081/nomurahls/kido.m3u8",
+        "type": "application/x-mpegURL"
       }
     ]
   },
@@ -124,6 +132,10 @@
       {
         "src": "rtmp://miyahira.me/araki/kido",
         "type": "rtmp/mp4"
+      },
+      {
+        "src": "http://miyahira.me:8081/arakihls/kido.m3u8",
+        "type": "application/x-mpegURL"
       }
     ]
   },
