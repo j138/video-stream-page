@@ -19,7 +19,7 @@ dependencies:
     - yarn install
 test:
   override:
-    - npm run eslint -- --format=junit -o $CIRCLE_TEST_REPORTS/eslint/eslint.xml .
+    - npm run test
 deployment:
   production:
     branch: master
