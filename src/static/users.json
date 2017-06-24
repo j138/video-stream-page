@@ -8,7 +8,7 @@
         "type": "rtmp/mp4"
       },
       {
-        "src": "rtmp://miyahira.me:8081/jey3hls/kido.m3u8",
+        "src": "http://miyahira.me:8081/jey3hls/kido.m3u8",
         "type": "application/x-mpegURL"
       }
     ]
@@ -84,7 +84,7 @@
         "type": "rtmp/mp4"
       },
       {
-        "src": "rtmp://miyahira.me:8081/segirlhls/kido.m3u8",
+        "src": "http://miyahira.me:8081/segirlhls/kido.m3u8",
         "type": "application/x-mpegURL"
       }
     ]
