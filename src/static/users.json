@@ -171,7 +171,7 @@
   },
   {
     "name": "hlstest",
-    "image": "https://i.imgur.com/NX1FPi5.jpg",
+    "image": "",
     "source": [
       {
         "src": "http://miyahira.me:8081/jey3hls/kido.m3u8",
