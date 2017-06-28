@@ -140,6 +140,20 @@
     ]
   },
   {
+    "name": "les",
+    "image": "",
+    "source": [
+      {
+        "src": "rtmp://miyahira.me/les/kido",
+        "type": "rtmp/mp4"
+      },
+      {
+        "src": "http://miyahira.me:8081/les/kido.m3u8",
+        "type": "application/x-mpegURL"
+      }
+    ]
+  },
+  {
     "name": "thomas",
     "image": "",
     "source": [
