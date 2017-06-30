@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import request from 'superagent';
 import videojs from 'video.js';
 import 'videojs-flash';
+import 'videojs-contrib-hls';
 import 'video.js/dist/video-js.min.css';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
