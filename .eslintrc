@@ -7,16 +7,27 @@
   },
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "jsx-a11y",
+    "import"
   ],
   "rules": {
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": [ "error", "unix" ],
+    "global-require": 0,
+    "max-len": 0,
     "no-confusing-arrow": 0,
     "no-mixed-operators": 0,
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": true,
-      "optionalDependencies": true
-    }]
+    "no-console": 0,
+    "jsx-a11y/img-has-alt": 0,
+    "no-await-in-loop": 0,
+    "no-restricted-syntax": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true
+      }
+    ]
   },
   "ecmaFeatures": {
     "arrowFunctions": true,

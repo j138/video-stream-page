@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
@@ -9,15 +10,12 @@ import IconGithub from '../src/image/iconmonstr-github.svg';
 import * as styles from './styles';
 
 @Radium
+@inject('userStore')
+@observer
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
-  }
-
-  shouldComponentUpdate(nextProps) {
-    if (nextProps.user.name === '') return false;
-    return true;
   }
 
   selectUser() {
@@ -36,7 +34,8 @@ class Header extends React.Component {
       },
     ];
 
-    const { users, user } = this.props;
+    const { users, user } = this.props.userStore;
+    if (user === null) return null;
 
     return (
       <header>
@@ -84,7 +83,10 @@ class Header extends React.Component {
 
           {users.map(u =>
             (<Link key={u.name} to={u.name} style={styles.drawerItem}>
-              <MenuItem onTouchTap={() => this.selectUser()} primaryText={u.name} />
+              <MenuItem
+                onTouchTap={() => this.selectUser()}
+                primaryText={u.name}
+              />
             </Link>),
           )}
 
@@ -95,7 +97,6 @@ class Header extends React.Component {
               <MenuItem primaryText={v.text} />
             </a>),
           )}
-
         </Drawer>
       </header>
     );
@@ -103,13 +104,9 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-  }).isRequired,
-  users: PropTypes.shape({
-    user: PropTypes.shape({
-      name: PropTypes.string,
-    }),
+  userStore: PropTypes.shape({
+    users: PropTypes.arrayOf(),
+    user: PropTypes.shape(),
   }).isRequired,
 };
 

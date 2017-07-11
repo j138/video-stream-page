@@ -1,51 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
+import { inject, observer } from 'mobx-react';
+import ReactHLS from 'react-hls';
 import Radium from 'radium';
 import * as styles from './styles';
 
 @Radium
+@inject('userStore')
+@observer
 class VideoSection extends React.Component {
   render() {
-    const props = {
+    const { user } = this.props.userStore;
+
+    const videoProps = {
       id: 'main-video',
-      className: cx('video-js', 'vjs-default-skin'),
-      poster: this.props.user.image,
+      url: user.source[0].src,
+      poster: user.image,
       controls: true,
       autoPlay: false,
-      preload: 'none',
+      height: window.innerHeight - 50,
+      width: window.innerWidth,
     };
 
-    const datasetup = `
-        {
-          "nativeControlsForTouch": "true",
-          "techOrder": ["flash", "html5"],
-          "controlBar": {
-            "timeDivider": false,
-            "durationDisplay": true,
-            "progressControl": true
-          }
-        }`;
-
     return (
-      <video
+      <ReactHLS
         style={styles.wideScreen}
-        {...props}
         ref={(c) => {
           this.videoPlayer = c;
         }}
-        data-setup={datasetup}
+        {...videoProps}
       >
         <track kind="captions" />
-      </video>
+      </ReactHLS>
     );
   }
 }
 
 VideoSection.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-    image: PropTypes.string,
+  userStore: PropTypes.shape({
+    user: PropTypes.shape(),
   }).isRequired,
 };
 
