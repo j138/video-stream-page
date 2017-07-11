@@ -46,6 +46,7 @@ class App extends React.Component {
             ref={(c) => {
               this.videoSection = c;
             }}
+            user={user}
           />
         </div>
       </div>

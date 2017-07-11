@@ -3,33 +3,37 @@ import PropTypes from 'prop-types';
 import { inject, observer } from 'mobx-react';
 import ReactHLS from 'react-hls';
 import Radium from 'radium';
-import * as styles from './styles';
+import plyr from 'plyr';
+import 'plyr/dist/plyr.css';
 
 @Radium
 @inject('userStore')
 @observer
 class VideoSection extends React.Component {
+  componentDidMount() {
+    const v = document.querySelector('#player');
+    plyr.setup(v);
+  }
+
+  componentDidUpdate() {
+    const v = document.querySelector('#player');
+    plyr.setup(v);
+  }
+
   render() {
-    const { user } = this.props.userStore;
+    const { user } = this.props;
 
     const videoProps = {
-      id: 'main-video',
+      id: 'player',
       url: user.source[0].src,
       poster: user.image,
       controls: true,
       autoPlay: false,
-      height: window.innerHeight - 50,
-      width: window.innerWidth,
+      crossorigin: true,
     };
 
     return (
-      <ReactHLS
-        style={styles.wideScreen}
-        ref={(c) => {
-          this.videoPlayer = c;
-        }}
-        {...videoProps}
-      >
+      <ReactHLS {...videoProps}>
         <track kind="captions" />
       </ReactHLS>
     );
@@ -37,9 +41,7 @@ class VideoSection extends React.Component {
 }
 
 VideoSection.propTypes = {
-  userStore: PropTypes.shape({
-    user: PropTypes.shape(),
-  }).isRequired,
+  user: PropTypes.shape().isRequired,
 };
 
 export default VideoSection;
