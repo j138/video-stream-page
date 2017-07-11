@@ -1,52 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
+import { inject, observer } from 'mobx-react';
+import ReactHLS from 'react-hls';
 import Radium from 'radium';
-import * as styles from './styles';
+import plyr from 'plyr';
+import 'plyr/dist/plyr.css';
 
 @Radium
+@inject('userStore')
+@observer
 class VideoSection extends React.Component {
+  componentDidMount() {
+    const v = document.querySelector('#player');
+    plyr.setup(v);
+  }
+
+  componentDidUpdate() {
+    const v = document.querySelector('#player');
+    plyr.setup(v);
+  }
+
   render() {
-    const props = {
-      id: 'main-video',
-      className: cx('video-js', 'vjs-default-skin'),
-      poster: this.props.user.image,
+    const { user } = this.props;
+
+    const videoProps = {
+      id: 'player',
+      url: user.source[0].src,
+      poster: user.image,
       controls: true,
       autoPlay: false,
-      preload: 'none',
+      crossorigin: true,
     };
 
-    const datasetup = `
-        {
-          "nativeControlsForTouch": "true",
-          "techOrder": ["flash", "html5"],
-          "controlBar": {
-            "timeDivider": false,
-            "durationDisplay": true,
-            "progressControl": true
-          }
-        }`;
-
     return (
-      <video
-        style={styles.wideScreen}
-        {...props}
-        ref={(c) => {
-          this.videoPlayer = c;
-        }}
-        data-setup={datasetup}
-      >
+      <ReactHLS {...videoProps}>
         <track kind="captions" />
-      </video>
+      </ReactHLS>
     );
   }
 }
 
 VideoSection.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-    image: PropTypes.string,
-  }).isRequired,
+  user: PropTypes.shape().isRequired,
 };
 
 export default VideoSection;

@@ -1,26 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { inject, observer } from 'mobx-react';
 import Helmet from 'react-helmet';
 import request from 'superagent';
-import videojs from 'video.js';
-import 'videojs-flash';
-import 'video.js/dist/video-js.min.css';
 import Header from '../components/Header';
 import VideoSection from '../components/VideoSection';
 import Loading from '../components/Loading';
 
 const apiUrl = 'users.json';
 
+@inject('userStore')
+@observer
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      user: { name: '', image: '', source: [{ src: '', type: '' }] },
-      users: [],
-    };
-  }
-
   componentDidMount() {
     const params = this.props.match.params;
 
@@ -30,58 +21,32 @@ class App extends React.Component {
       }
 
       const users = res.body;
-      const user = users.find(u => u.name === params.userName) || users[0];
-
-      this.setState({ users, user });
+      this.props.userStore.users = users;
+      this.props.userStore.pickUser = params.userName || users[0].name;
     });
   }
 
   componentWillReceiveProps(newProps) {
-    const { users } = this.state;
     const params = newProps.match.params;
-
-    this.setState({ user: users.find(u => u.name === params.userName) });
-  }
-
-  shouldComponentUpdate(newProps) {
-    const { user } = this.state;
-    const params = newProps.match.params;
-
-    if (params.userName !== user.name) return true;
-    return false;
-  }
-
-  componentDidUpdate() {
-    if (!this.videoSection) return;
-    this.setup();
-  }
-
-  setup() {
-    const { user } = this.state;
-
-    const v = videojs(this.videoSection.videoPlayer);
-    v.poster(user.image);
-    v.src(user.source);
-    v.load();
-    v.play();
+    this.props.userStore.pickUser = params.userName;
   }
 
   render() {
-    const { user, users } = this.state;
+    const { user } = this.props.userStore;
 
-    if (user.name === '') return <Loading />;
+    if (user === null) return <Loading />;
 
     return (
       <div>
         <Helmet title={user.name} />
         <div>
-          <Header user={user} users={users} />
+          <Header />
           <VideoSection
             ref={(c) => {
               this.videoSection = c;
             }}
             user={user}
-          />{' '}
+          />
         </div>
       </div>
     );
@@ -89,6 +54,11 @@ class App extends React.Component {
 }
 
 App.propTypes = {
+  userStore: PropTypes.shape({
+    users: PropTypes.arrayOf(),
+    user: PropTypes.shape(),
+    pickUser: PropTypes.string,
+  }).isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
       userName: PropTypes.string,

@@ -4,12 +4,12 @@
     "image": "https://i.imgur.com/NX1FPi5.jpg",
     "source": [
       {
-        "src": "rtmp://miyahira.me/jey3/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/jey3hls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/jey3/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -18,12 +18,12 @@
     "image": "https://lolstatic-a.akamaihd.net/frontpage/apps/prod/elementalist-lux-2016/ja_JP/728095d33c01137a265f7c8f556195908e25fb16/assets/images/infos/art.jpg",
     "source": [
       {
-        "src": "rtmp://miyahira.me/abeyan/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/abeyanhls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/abeyan/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -32,12 +32,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/tosiko/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/tosikohls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/tosiko/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -46,12 +46,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/nomura/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/nomurahls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/nomura/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -60,12 +60,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/takatu/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/takatuhls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/takatu/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -74,12 +74,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/morita/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/moritahls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/morita/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -88,12 +88,12 @@
     "image": "http://i.imgur.com/gcVaAy3.jpg",
     "source": [
       {
-        "src": "rtmp://miyahira.me/segirl/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/segirlhls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/segirl/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -102,12 +102,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/rophy/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/rophyhls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/rophy/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -116,12 +116,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/booya/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/booyahls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/booya/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -130,12 +130,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/araki/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/arakihls/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/araki/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
@@ -144,12 +144,12 @@
     "image": "",
     "source": [
       {
-        "src": "rtmp://miyahira.me/les/kido",
-        "type": "rtmp/mp4"
-      },
-      {
         "src": "http://miyahira.me:8081/les/kido.m3u8",
         "type": "application/x-mpegURL"
+      },
+      {
+        "src": "rtmp://miyahira.me/les/kido",
+        "type": "rtmp/mp4"
       }
     ]
   },
