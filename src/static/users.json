@@ -4,7 +4,7 @@
     "image": "https://i.imgur.com/NX1FPi5.jpg",
     "source": [
       {
-        "src": "http://miyahira.me:8081/jey3hls/kido.m3u8",
+        "src": "https://miyahira.me/jey3hls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -18,7 +18,7 @@
     "image": "https://lolstatic-a.akamaihd.net/frontpage/apps/prod/elementalist-lux-2016/ja_JP/728095d33c01137a265f7c8f556195908e25fb16/assets/images/infos/art.jpg",
     "source": [
       {
-        "src": "http://miyahira.me:8081/abeyanhls/kido.m3u8",
+        "src": "https://miyahira.me/abeyanhls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -32,7 +32,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/tosikohls/kido.m3u8",
+        "src": "https://miyahira.me/tosikohls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -46,7 +46,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/nomurahls/kido.m3u8",
+        "src": "https://miyahira.me/nomurahls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -60,7 +60,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/takatuhls/kido.m3u8",
+        "src": "https://miyahira.me/takatuhls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -74,7 +74,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/moritahls/kido.m3u8",
+        "src": "https://miyahira.me/moritahls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -88,7 +88,7 @@
     "image": "http://i.imgur.com/gcVaAy3.jpg",
     "source": [
       {
-        "src": "http://miyahira.me:8081/segirlhls/kido.m3u8",
+        "src": "https://miyahira.me/segirlhls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -102,7 +102,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/rophyhls/kido.m3u8",
+        "src": "https://miyahira.me/rophyhls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -116,7 +116,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/booyahls/kido.m3u8",
+        "src": "https://miyahira.me/booyahls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -130,7 +130,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/arakihls/kido.m3u8",
+        "src": "https://miyahira.me/arakihls/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -144,7 +144,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/les/kido.m3u8",
+        "src": "https://miyahira.me/les/kido.m3u8",
         "type": "application/x-mpegURL"
       },
       {
@@ -188,7 +188,7 @@
     "image": "",
     "source": [
       {
-        "src": "http://miyahira.me:8081/jey3hls/kido.m3u8",
+        "src": "https://miyahira.me/jey3hls/kido.m3u8",
         "type": "application/x-mpegURL"
       }
     ]
