@@ -33,7 +33,6 @@ class App extends React.Component {
 
   render() {
     const { user } = this.props.userStore;
-    console.log(user);
 
     if (user === null) return <Loading />;
 

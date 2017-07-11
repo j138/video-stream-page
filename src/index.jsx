@@ -23,7 +23,6 @@ window.React = React;
 ReactGA.initialize('UA-88356342-1');
 
 const logPageView = () => {
-  window.console.log(window.location);
   ReactGA.set({ page: window.location.pathname });
   ReactGA.pageview(window.location.pathname);
   return null;
