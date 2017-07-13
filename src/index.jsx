@@ -10,9 +10,9 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import Template from '../containers/Template';
+import Template from './containers/Template';
 import UserStore from './stores/UserStore';
-import App from '../containers/App';
+import App from './containers/App';
 import './main.css';
 import './videojs-custom.css';
 

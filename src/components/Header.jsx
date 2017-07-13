@@ -4,9 +4,9 @@ import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import { AppBar, Drawer, MenuItem, Divider, IconButton } from 'material-ui';
 import Radium from 'radium';
-import IconDiscord from '../src/image/discord-logo.svg';
-import IconBeer from '../src/image/iconmonstr-beer.svg';
-import IconGithub from '../src/image/iconmonstr-github.svg';
+import IconDiscord from '../image/discord-logo.svg';
+import IconBeer from '../image/iconmonstr-beer.svg';
+import IconGithub from '../image/iconmonstr-github.svg';
 import * as styles from './styles';
 
 @inject('userStore')

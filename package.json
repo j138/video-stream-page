@@ -7,7 +7,7 @@
     "test": "npm-run-all -p eslint nsp",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix .",
-    "prettier": "find ./src ./components ./containers -name '*.js' -o -name '*.jsx' | xargs prettier-eslint --write",
+    "prettier": "find ./src -name '*.js' -o -name '*.jsx' | xargs prettier-eslint --write",
     "nsp": "nsp check",
     "start": "webpack-dev-server --history-api-fallback --hot --inline --progress --colors",
     "build:debug": "webpack -p --display-error-details --progress --colors",
