@@ -9,10 +9,17 @@ import IconBeer from '../src/image/iconmonstr-beer.svg';
 import IconGithub from '../src/image/iconmonstr-github.svg';
 import * as styles from './styles';
 
-@Radium
 @inject('userStore')
 @observer
+@Radium
 class Header extends React.Component {
+  propTypes = {
+    userStore: PropTypes.shape({
+      users: PropTypes.arrayOf(),
+      user: PropTypes.shape(),
+    }).isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.state = { open: false };
@@ -102,12 +109,5 @@ class Header extends React.Component {
     );
   }
 }
-
-Header.propTypes = {
-  userStore: PropTypes.shape({
-    users: PropTypes.arrayOf(),
-    user: PropTypes.shape(),
-  }).isRequired,
-};
 
 export default Header;

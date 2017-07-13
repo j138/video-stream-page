@@ -6,10 +6,14 @@ import Radium from 'radium';
 import plyr from 'plyr';
 import 'plyr/dist/plyr.css';
 
-@Radium
 @inject('userStore')
 @observer
+@Radium
 class VideoSection extends React.Component {
+  propTypes = {
+    user: PropTypes.shape().isRequired,
+  };
+
   componentDidMount() {
     const v = document.querySelector('#player');
     plyr.setup(v);
@@ -39,9 +43,5 @@ class VideoSection extends React.Component {
     );
   }
 }
-
-VideoSection.propTypes = {
-  user: PropTypes.shape().isRequired,
-};
 
 export default VideoSection;

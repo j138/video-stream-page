@@ -12,6 +12,19 @@ const apiUrl = 'users.json';
 @inject('userStore')
 @observer
 class App extends React.Component {
+  propTypes = {
+    userStore: PropTypes.shape({
+      users: PropTypes.arrayOf(),
+      user: PropTypes.shape(),
+      pickUser: PropTypes.string,
+    }).isRequired,
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        userName: PropTypes.string,
+      }).isRequired,
+    }).isRequired,
+  };
+
   componentDidMount() {
     const params = this.props.match.params;
 
@@ -52,18 +65,4 @@ class App extends React.Component {
     );
   }
 }
-
-App.propTypes = {
-  userStore: PropTypes.shape({
-    users: PropTypes.arrayOf(),
-    user: PropTypes.shape(),
-    pickUser: PropTypes.string,
-  }).isRequired,
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      userName: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
-};
-
 export default App;
