@@ -20,7 +20,7 @@ class App extends React.Component {
     }).isRequired,
     match: PropTypes.shape({
       params: PropTypes.shape({
-        userName: PropTypes.string,
+        name: PropTypes.string,
       }).isRequired,
     }).isRequired,
   };
@@ -35,13 +35,13 @@ class App extends React.Component {
 
       const users = res.body;
       this.props.userStore.users = users;
-      this.props.userStore.pickUser = params.userName || users[0].name;
+      this.props.userStore.pickUser = params.name || users[0].name;
     });
   }
 
   componentWillReceiveProps(newProps) {
     const params = newProps.match.params;
-    this.props.userStore.pickUser = params.userName;
+    this.props.userStore.pickUser = params.name;
   }
 
   render() {

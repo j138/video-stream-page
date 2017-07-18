@@ -42,7 +42,7 @@ ReactDOM.render(
           <Route path="/" component={logPageView} />
           <Switch>
             <Route exact path="/" component={App} />
-            <Route path="/:userName" component={App} />
+            <Route path="/:name" component={App} />
             <Redirect from="*" to="/" />
           </Switch>
         </div>
