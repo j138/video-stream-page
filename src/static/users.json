@@ -104,7 +104,7 @@
     "image": "",
     "source": [
       {
-        "src": "https://stream.miyahira.me/les/kido.m3u8",
+        "src": "https://stream.miyahira.me/leshls/kido.m3u8",
         "type": "application/x-mpegURL"
       }
     ]
