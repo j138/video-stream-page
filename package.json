@@ -61,7 +61,7 @@
     "firebase-tools": "^3.9.1",
     "html-webpack-plugin": "^2.29.0",
     "npm-run-all": "4.0.2",
-    "nsp": "2.6.3",
+    "nsp": "2.7.0",
     "prettier": "^1.5.3",
     "prettier-eslint": "^6.4.2",
     "prettier-eslint-cli": "^4.1.1",
