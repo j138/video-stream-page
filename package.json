@@ -86,7 +86,7 @@
     "mobx-react-router": "4.0.1",
     "object-assign": "^4.1.1",
     "plyr": "^2.0.13",
-    "prop-types": "15.5.10",
+    "prop-types": "15.6.0",
     "radium": "^0.19.1",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
